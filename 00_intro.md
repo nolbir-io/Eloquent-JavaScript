@@ -1,6 +1,6 @@
 {{meta {load_files: ["code/intro.js"]}}}
 
-# Introduction
+# Kirish
 
 {{quote {author: "Ellen Ullman", title: "Close to the Machine: Technophilia and its Discontents", chapter: true}
 
@@ -8,6 +8,7 @@ We think we are creating the system for our own purposes. We believe
 we are making it in our own image... But the computer is not really
 like us. It is a projection of a very slim part of ourselves: that
 portion devoted to logic, order, rule, and clarity.
+Biz tizimni o'z maqsadlarimiz uchun yaratmoqdamiz deb o'ylaymiz. Biz uni o'zimiz xohlagandek yaratayotganimizga ishonamiz ... Lekin kompyuter bizdan farq qiladi. U bizning nozik bir qismimizning mantiq, tartib, qoida va aniqlikka bag'ishlangan loyihasidir.   
 
 quote}}
 
