@@ -18,10 +18,7 @@ This is a book about instructing ((computer))s. Computers are about as
 common as screwdrivers today, but they are quite a bit more complex,
 and making them do what you want them to do isn't always easy.
 
-If the task you have for your computer is a common, well-understood
-one, such as showing you your email or acting like a calculator, you
-can open the appropriate ((application)) and get to work. But for
-unique or open-ended tasks, there probably is no application.
+Agar siz kompyuterga yukalatayotgan vazifa emaillarni ko'rsatish yoki kalkulyatordan foydalanish kabi umumiy, tushunishga oson bo'lsa, siz shunchaki dasturni ishga tushurish orqali vazifani bajarishingiz mumkin. Lekin vazifa takrorlanmas va ochiq yakunga ega bo'lsa, bunday vazifalar uchun dasturlar mavjud emas
 
 That is where ((programming)) may come in. _Programming_ is the act of
 constructing a _program_—a set of precise instructions telling a
