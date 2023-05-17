@@ -25,7 +25,7 @@ Agar siz bu holatda muammoga duch kelmasangiz vasizga bu indamas mashinlar bilan
 
 Dasturlashning asosiy qismi ((dasturlash tillari)) orqali amalga oshiriladi. _Dasturlash tili_ kompyuterga ko'rsatmalar berish uchun sun'iy ravishda yaratilgan til hisoblanadi. Qizig'i shundaki, biz kompyuter bilan muloqot qiladigan eng samarali usullar bir-birimiz bilan muloqot qilish usullaridan bilan juda o'xshash. Insonlar o'zaro muloqot qiladigan tillar singari, kompyuter tillari ham so'z va iboralarni yangi usullarda birlashtirishga imkon beradi, bu esa doimo yangi tushunchalarni ifodalashga imkon yaratadi.
 
-{{index [JavaScript, "availability of"], "casual computing"}}
+{{index [JavaScript, "imkoniyati"], "kompyuterdan kundalik foydalanish"}}
 
 At one point language-based interfaces, such as the BASIC and DOS
 prompts of the 1980s and 1990s, were the main method of interacting with
