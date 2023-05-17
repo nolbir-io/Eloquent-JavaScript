@@ -21,20 +21,9 @@ Aynan shu yerda ((dasturlash)) yordamga keladi. _Dasturlash_ bu _dasturni_ yarat
 
 {{index [dasturlash, "lazzati"], tezlik}}
 
-Fortunately, if you can get over that fact, and maybe even enjoy the rigor
-of thinking in terms that dumb machines can deal with, programming can
-be rewarding. It allows you to do things in seconds that would take
-_forever_ by hand. It is a way to make your computer tool
-do things that it couldn't do before. And it provides a wonderful
-exercise in abstract thinking.
+Agar siz bu holatda muammoga duch kelmasangiz vasizga bu indamas mashinlar bilan muloqotga kirishish yoqsa, dasturlash sizga ajoyib natijalarni taqdim etadi. Bu sizga bajarilishiga _yillar_ ketadigan vazifalarni soniyalar ichida yakunlashga imkon beradi. Bu sizning kompyuter vositangizni ilgari ilgari qodir bo'lmagan vazifalar tez va oson bajkarishning yangi yo'lidir. Va u abstrakt fikrlash uchun ajoyib mashq bo'la oladi.
 
-Most programming is done with ((programming language))s. A _programming
-language_ is an artificially constructed language used to instruct
-computers. It is interesting that the most effective way we've found
-to communicate with a computer borrows so heavily from the way we
-communicate with each other. Like human languages, computer languages
-allow words and phrases to be combined in new ways, making it possible to
-express ever new concepts.
+Dasturlashning asosiy qismi ((dasturlash tillari)) orqali amalga oshiriladi. _Dasturlash tili_ kompyuterga ko'rsatmalar berish uchun sun'iy ravishda yaratilgan til hisoblanadi. Qizig'i shundaki, biz kompyuter bilan muloqot qiladigan eng samarali usullar bir-birimiz bilan muloqot qilish usullaridan bilan juda o'xshash. Insonlar o'zaro muloqot qiladigan tillar singari, kompyuter tillari ham so'z va iboralarni yangi usullarda birlashtirishga imkon beradi, bu esa doimo yangi tushunchalarni ifodalashga imkon yaratadi.
 
 {{index [JavaScript, "availability of"], "casual computing"}}
 
