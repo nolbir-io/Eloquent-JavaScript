@@ -1,52 +1,33 @@
 {{meta {load_files: ["code/intro.js"]}}}
 
-# Introduction
+# Kirish
 
 {{quote {author: "Ellen Ullman", title: "Close to the Machine: Technophilia and its Discontents", chapter: true}
 
-We think we are creating the system for our own purposes. We believe
-we are making it in our own image... But the computer is not really
-like us. It is a projection of a very slim part of ourselves: that
-portion devoted to logic, order, rule, and clarity.
+Biz tizimni o'z maqsadlarimiz uchun yaratmoqdamiz deb o'ylaymiz. Biz uni o'zimiz xohlagandek yaratayotganimizga ishonamiz ... Lekin kompyuter bizdan farq qiladi. U bizning nozik bir qismimizning mantiq, tartib, qoida va aniqlikka bag'ishlangan loyihasidir.   
 
 quote}}
 
 {{figure {url: "img/chapter_picture_00.jpg", alt: "Picture of a screwdriver and a circuit board", chapter: "framed"}}}
 
-This is a book about instructing ((computer))s. Computers are about as
-common as screwdrivers today, but they are quite a bit more complex,
-and making them do what you want them to do isn't always easy.
+Bu kitob ((kompyuter))larning tuzilishi haqida. Bugungi kunda kompyuterlar huddi bint buragichlari kabi ommaga keng ma'lum, lekin ular anchagina murakkab va aytanimizni qildira olish har doim  ham oson bo'lmaydi 
 
 If the task you have for your computer is a common, well-understood
 one, such as showing you your email or acting like a calculator, you
 can open the appropriate ((application)) and get to work. But for
 unique or open-ended tasks, there probably is no application.
 
-That is where ((programming)) may come in. _Programming_ is the act of
-constructing a _program_—a set of precise instructions telling a
-computer what to do. Because computers are dumb, pedantic beasts,
-programming is fundamentally tedious and frustrating.
+Aynan shu yerda ((dasturlash)) yordamga keladi. _Dasturlash_ bu _dasturni_ yaratish jarayoni, ya'ni - kompyuterga nima qilish kerakligini ko'rsatadigan aniq ko'rsatmalar to'plami.Kopmyuterlar bizni tushunishi qiyin va o'ta rasmiy bo'lganligi sababli dasturlash kutilgandan ko'ra zerikarli va stressga sabab bo'ladi   .
 
-{{index [programming, "joy of"], speed}}
+{{index [dasturlash, "lazzati"], tezlik}}
 
-Fortunately, if you can get over that fact, and maybe even enjoy the rigor
-of thinking in terms that dumb machines can deal with, programming can
-be rewarding. It allows you to do things in seconds that would take
-_forever_ by hand. It is a way to make your computer tool
-do things that it couldn't do before. And it provides a wonderful
-exercise in abstract thinking.
+Agar siz bu holatda muammoga duch kelmasangiz vasizga bu indamas mashinlar bilan muloqotga kirishish yoqsa, dasturlash sizga ajoyib natijalarni taqdim etadi. Bu sizga bajarilishiga _yillar_ ketadigan vazifalarni soniyalar ichida yakunlashga imkon beradi. Bu sizning kompyuter vositangizni ilgari ilgari qodir bo'lmagan vazifalar tez va oson bajkarishning yangi yo'lidir. Va u abstrakt fikrlash uchun ajoyib mashq bo'la oladi.
 
-Most programming is done with ((programming language))s. A _programming
-language_ is an artificially constructed language used to instruct
-computers. It is interesting that the most effective way we've found
-to communicate with a computer borrows so heavily from the way we
-communicate with each other. Like human languages, computer languages
-allow words and phrases to be combined in new ways, making it possible to
-express ever new concepts.
+Dasturlashning asosiy qismi ((dasturlash tillari)) orqali amalga oshiriladi. _Dasturlash tili_ kompyuterga ko'rsatmalar berish uchun sun'iy ravishda yaratilgan til hisoblanadi. Qizig'i shundaki, biz kompyuter bilan muloqot qiladigan eng samarali usullar bir-birimiz bilan muloqot qilish usullaridan bilan juda o'xshash. Insonlar o'zaro muloqot qiladigan tillar singari, kompyuter tillari ham so'z va iboralarni yangi usullarda birlashtirishga imkon beradi, bu esa doimo yangi tushunchalarni ifodalashga imkon yaratadi.
 
-{{index [JavaScript, "availability of"], "casual computing"}}
+{{index [JavaScript, "imkoniyati"], "kompyuterdan kundalik foydalanish"}}
 
-At one point language-based interfaces, such as the BASIC and DOS
+ bazi holatlarda At one point language-based interfaces, such as the BASIC and DOS
 prompts of the 1980s and 1990s, were the main method of interacting with
 computers. They have largely been replaced with visual interfaces,
 which are easier to learn but offer less freedom. Computer languages
@@ -505,13 +486,11 @@ function factorial(n) {
 
 {{index "console.log"}}
 
-Sometimes, to show the output that a program produces, the
-expected output is written after it, with two slashes and an arrow in
-front.
+Ba'zan dastur ishlab chiqaradigan natijani ko'rsatish uchun undan keyin kutilgan natija slash chiziq va oldida strelka bilan yoziladi.
 
 ```
 console.log(factorial(8));
 // → 40320
 ```
 
-Good luck!
+Omad yor bo'lsin!
