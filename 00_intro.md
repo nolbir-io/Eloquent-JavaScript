@@ -4,31 +4,19 @@
 
 {{quote {author: "Ellen Ullman", title: "Close to the Machine: Technophilia and its Discontents", chapter: true}
 
-We think we are creating the system for our own purposes. We believe
-we are making it in our own image... But the computer is not really
-like us. It is a projection of a very slim part of ourselves: that
-portion devoted to logic, order, rule, and clarity.
 Biz tizimni o'z maqsadlarimiz uchun yaratmoqdamiz deb o'ylaymiz. Biz uni o'zimiz xohlagandek yaratayotganimizga ishonamiz ... Lekin kompyuter bizdan farq qiladi. U bizning nozik bir qismimizning mantiq, tartib, qoida va aniqlikka bag'ishlangan loyihasidir.   
 
 quote}}
 
 {{figure {url: "img/chapter_picture_00.jpg", alt: "Picture of a screwdriver and a circuit board", chapter: "framed"}}}
 
-This is a book about instructing ((computer))s. Computers are about as
-common as screwdrivers today, but they are quite a bit more complex,
-and making them do what you want them to do isn't always easy.
+Bu kitob ((kompyuter))larning tuzilishi haqida. Bugungi kunda kompyuterlar huddi bint buragichlari kabi ommaga keng ma'lum, lekin ular anchagina murakkab va aytanimizni qildira olish har doim  ham oson bo'lmaydi 
 
-If the task you have for your computer is a common, well-understood
-one, such as showing you your email or acting like a calculator, you
-can open the appropriate ((application)) and get to work. But for
-unique or open-ended tasks, there probably is no application.
+Agar sizning kompyuteringiz uchun mavjud bo'lgan vazifa umumiy, yaxshi tushunilgan bo'lsa, masalan, sizga elektron pochtangizni ko'rsatish yoki kalkulyator kabi harakat qilish bo'lsa, siz tegishli ((ilova)) ni ochib, ishga kirishingiz mumkin. Ammo noyob yoki ochiq vazifalar uchun, ehtimol, ilova yo'q.
 
-That is where ((programming)) may come in. _Programming_ is the act of
-constructing a _program_—a set of precise instructions telling a
-computer what to do. Because computers are dumb, pedantic beasts,
-programming is fundamentally tedious and frustrating.
+Aynan shu yerda ((dasturlash)) yordamga keladi. _Dasturlash_ bu _dasturni_ yaratish jarayoni, ya'ni - kompyuterga nima qilish kerakligini ko'rsatadigan aniq ko'rsatmalar to'plami.Kopmyuterlar bizni tushunishi qiyin va o'ta rasmiy bo'lganligi sababli dasturlash kutilgandan ko'ra zerikarli va stressga sabab bo'ladi   .
 
-{{index [programming, "joy of"], speed}}
+{{index [dasturlash, "lazzati"], tezlik}}
 
 Fortunately, if you can get over that fact, and maybe even enjoy the rigor
 of thinking in terms that dumb machines can deal with, programming can
@@ -506,13 +494,11 @@ function factorial(n) {
 
 {{index "console.log"}}
 
-Sometimes, to show the output that a program produces, the
-expected output is written after it, with two slashes and an arrow in
-front.
+Ba'zan dastur ishlab chiqaradigan natijani ko'rsatish uchun undan keyin kutilgan natija slash chiziq va oldida strelka bilan yoziladi.
 
 ```
 console.log(factorial(8));
 // → 40320
 ```
 
-Good luck!
+Omad yor bo'lsin!
