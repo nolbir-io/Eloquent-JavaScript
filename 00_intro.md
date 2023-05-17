@@ -27,7 +27,7 @@ Dasturlashning asosiy qismi ((dasturlash tillari)) orqali amalga oshiriladi. _Da
 
 {{index [JavaScript, "imkoniyati"], "kompyuterdan kundalik foydalanish"}}
 
-At one point language-based interfaces, such as the BASIC and DOS
+ bazi holatlarda At one point language-based interfaces, such as the BASIC and DOS
 prompts of the 1980s and 1990s, were the main method of interacting with
 computers. They have largely been replaced with visual interfaces,
 which are easier to learn but offer less freedom. Computer languages
