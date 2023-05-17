@@ -12,7 +12,10 @@ quote}}
 
 Bu kitob ((kompyuter))larning tuzilishi haqida. Bugungi kunda kompyuterlar huddi bint buragichlari kabi ommaga keng ma'lum, lekin ular anchagina murakkab va aytanimizni qildira olish har doim  ham oson bo'lmaydi 
 
-Agar sizning kompyuteringiz uchun mavjud bo'lgan vazifa umumiy, yaxshi tushunilgan bo'lsa, masalan, sizga elektron pochtangizni ko'rsatish yoki kalkulyator kabi harakat qilish bo'lsa, siz tegishli ((ilova)) ni ochib, ishga kirishingiz mumkin. Ammo noyob yoki ochiq vazifalar uchun, ehtimol, ilova yo'q.
+If the task you have for your computer is a common, well-understood
+one, such as showing you your email or acting like a calculator, you
+can open the appropriate ((application)) and get to work. But for
+unique or open-ended tasks, there probably is no application.
 
 Aynan shu yerda ((dasturlash)) yordamga keladi. _Dasturlash_ bu _dasturni_ yaratish jarayoni, ya'ni - kompyuterga nima qilish kerakligini ko'rsatadigan aniq ko'rsatmalar to'plami.Kopmyuterlar bizni tushunishi qiyin va o'ta rasmiy bo'lganligi sababli dasturlash kutilgandan ko'ra zerikarli va stressga sabab bo'ladi   .
 
