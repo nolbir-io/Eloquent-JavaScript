@@ -4,151 +4,78 @@
 
 {{quote {author: "Ellen Ullman", title: "Close to the Machine: Technophilia and its Discontents", chapter: true}
 
-We think we are creating the system for our own purposes. We believe
-we are making it in our own image... But the computer is not really
-like us. It is a projection of a very slim part of ourselves: that
-portion devoted to logic, order, rule, and clarity.
+ Biz tizimni o'z maqsadlarimiz uchun yaratmoqdamiz deb o'ylaymiz. Biz buni o'zimiz xohlagandek yaratayotganimizga ishonamiz ... Lekin kompyuter aslida bizga o'xshamaydi. U bizning juda nozik bir qismimiz, mantiq,tartib, qoida va ravshanlik tarafidan yaratilgan qurilmadir.
 
 quote}}
 
 {{figure {url: "img/chapter_picture_00.jpg", alt: "Picture of a screwdriver and a circuit board", chapter: "framed"}}}
 
-This is a book about instructing ((computer))s. Computers are about as
-common as screwdrivers today, but they are quite a bit more complex,
-and making them do what you want them to do isn't always easy.
+Bu kitob ((kompyuter))larga ko'rsatma berish haqida. Kompyuterlar bugungi kundahuddi oddiy vint buragichlar kabi keng tarqalganiga qaramasdan biroz murakkab tuzilishga ega va har doim ham kompyuterlar orqali o'zimiz xohlagan ishlarni amalga oshirish oson kechavermaydi.
 
-If the task you have for your computer is a common, well-understood
-one, such as showing you your email or acting like a calculator, you
-can open the appropriate ((application)) and get to work. But for
-unique or open-ended tasks, there probably is no application.
 
-That is where ((programming)) may come in. _Programming_ is the act of
-constructing a _program_—a set of precise instructions telling a
-computer what to do. Because computers are dumb, pedantic beasts,
-programming is fundamentally tedious and frustrating.
+Agar siz kompyuterga elektron pochtadagi habarlarni ko'rsatish yoki hisoblash amallarini bajarish kabi oddiy va tushunish oson bo'lgan vazifalarni yuklatsangiz, shunchaki topshiriqqa oid ((ilova))dan foydalanishning o'zi kifoya qiladi. Lekin siz kompyuterga yuklatayotgan vazifa o'ziga xos, avvaldan belgilangan chegara va cheklovlarga ega bo'lmasa, unda bu vazifaga mo'ljallangan dasturning mavjud emaslik ehtimoli yuqori.
+
+Bu masalada sizga ((dasturlash)) yordam beradi. _Dasturlash_ kompyuterga qanday vazifa bajarishi kerakligi haqidagi buyruqlar jamlanmasi bo'lgan _dastur_ yaratish jarayonidir. Kompyuterlar indamas lekin juda sinchkovligi dasturlashni zerikarli va asabbuzar qilib ko'rsatadi.
 
 {{index [programming, "joy of"], speed}}
 
-Fortunately, if you can get over that fact, and maybe even enjoy the rigor
-of thinking in terms that dumb machines can deal with, programming can
-be rewarding. It allows you to do things in seconds that would take
-_forever_ by hand. It is a way to make your computer tool
-do things that it couldn't do before. And it provides a wonderful
-exercise in abstract thinking.
+Lekin buning uaxshi tarafi shundaki agar siz ushbu kamchiliklarni yengib o'tib, bu 'indamas' qurilma bilan til topisha olsangiz, dasturlash juda foydali mashg'ulot bo'ladi. Bu sizga qo'l bilan bajarganda _bir umr_ vaqt olishi mumkin bo'lgan vazifalarni soniyalar ichida bajarishga yordam beradi. Bu sizning kompyuteringiz avvallari bajara olmagan topshiriqlarni bajarishiga imkoniyat yaratib berish yo'li. Dasturlash abstrakt fikrlash uchun ham ajoyib mashg'ulot bo'la oladi.
 
-Most programming is done with ((programming language))s. A _programming
-language_ is an artificially constructed language used to instruct
-computers. It is interesting that the most effective way we've found
-to communicate with a computer borrows so heavily from the way we
-communicate with each other. Like human languages, computer languages
-allow words and phrases to be combined in new ways, making it possible to
-express ever new concepts.
+Dasturlashning asosiy qismi ((dasturlash tillari)) orqali amalga oshiriladi. _Dasturlash tili_ kompyuterlarga ko'rsatmalar berish uchun sun'iy ravishda tuzilgan til hisoblanadi. Qizig'i shundaki, kompyuterlar bilan muloqotga kirishishning ko'plab taraflari biz o'zaro muloqot qilishimizdan andoza olgan. Huddi biz so'zlashadigan tillar singari dasturlash tillari ham so'zlar va iboralarni yangi usullarda birlashtirishga imkon beradi, bu esa doimo yangi tushunchalarni ifodalash imkoni demakdir.
 
 {{index [JavaScript, "availability of"], "casual computing"}}
 
-At one point language-based interfaces, such as the BASIC and DOS
-prompts of the 1980s and 1990s, were the main method of interacting with
-computers. They have largely been replaced with visual interfaces,
-which are easier to learn but offer less freedom. Computer languages
-are still there, if you know where to look. One such language,
-JavaScript, is built into every modern web ((browser)) and is thus
-available on almost every device.
+1980 va 1990 yillardagi BASIC va DOS buyruqlari kabi tilga asoslangan interfeyslar kompyuterlar bilan o'zaro aloqa qilishning asosiy usuli edi. Ular o'rganish osonroq, lekin kamroq erkinlik imkonini beradigan interfeyslar bilan almashtirildi. Atrofga nazar soladigan bo'lsak, komyuter uchun mo'ljallangan ko'plab tillar hozir ham mavjud. Shunday tillardan biri JavaScript bo'lib, u har bir zamonaviy internet ((brauzer))igan o'rnatilgan va shuning uchun deyarli barcha qurilmalarda mavjud.
 
 {{indexsee "web browser", browser}}
 
-This book will try to make you familiar enough with this language to
-do useful and amusing things with it.
+Qo'lingizdagi kitob sizga bu til bilan yaqinroqdan tanishish va uning yordamida ajoyib ishlarni amalga oshirishingizga hizmat qiladi.
 
 ## On programming
 
 {{index [programming, "difficulty of"]}}
 
-Besides explaining JavaScript, I will introduce the basic
-principles of programming. Programming, it turns out, is hard. The
-fundamental rules are simple and clear, but programs built on top of
-these rules tend to become complex enough to introduce their own rules
-and complexity. You're building your own maze, in a way, and you might
-just get lost in it.
+Kitobda JavaScriptga oid ma'lumotlardan tashqari dasturlashning asosiy tamoyillari bilan bilan ham tanishtirib o'tilgan. Dasturlash juda murakkab jarayon sifatida ma'lum bo'lib kelmoqda. Dasturlashdagi asosiy qoidalar sodda va tushunarli, ammo bu qoidalar asosida tuzilgan dasturlar o'z qoidalari va murakkabligini joriy qilish uchun yetarlicha murakkablashib boradi. Siz qaysidir ma'noda o'zingiz labirint qurmoqdasiz va unda shunchaki adashib qolishingiz ham mumkin.
 
 {{index learning}}
 
-There will be times when reading this book feels terribly frustrating.
-If you are new to programming, there will be a lot of new material to
-digest. Much of this material will then be _combined_ in ways that
-require you to make additional connections.
+Bu kitobni o'qish davomida ko'plab qiyinchiliklarga duch keladigan paytlar bo'ladi. Agar siz dasturlashda yangi bo'lsangiz, kitob sizga o'rganib chiqish uchun juda ko'p yangi materiallar taqdim etadi. Keyinchalik ushbu materialning ko'p qismi qo'shimcha bog'liqliklar talab qiladigan usullar bilan _birlashtiriladi_.
 
-It is up to you to make the necessary effort. When you are struggling
-to follow the book, do not jump to any conclusions about your own
-capabilities. You are fine—you just need to keep at it. Take a break,
-reread some material, and make sure you read and understand the
-example programs and ((exercises)). Learning is hard work, but
-everything you learn is yours and will make subsequent learning
-easier.
+Shunga yarasha harakat qilish bo'lsa o'zingizga bog'liq. Kitobdagi ma'lumotlarni to'liq anglab yetishga qiynalayotganingizda, o'zingizning imkoniyatlaringiz haqida hech qanday xulosa chiqarishga shoshilmang. Siz aqllisiz - siz shunchaki o'rganishdan to'xtamasligingiz kerak. Tanaffus qiling, ba'zi materiallarni qayta o'qing va misol qilib ko'rsatilgan dasturlarni va ((mashqlar))ni o'qib, tushunganingizga ishonch hosil qiling. O'rganish qiyin ish, lekin siz o'rgangan hamma narsa sizniki va va ular keyingi o'rganish jarayonlarini osonlashtiradi.
 
 {{quote {author: "Ursula K. Le Guin", title: "The Left Hand of Darkness"}
 
 {{index "Le Guin, Ursula K."}}
 
-When action grows unprofitable, gather information; when information
-grows unprofitable, sleep.
+Harakat foydasiz bo'lib qolsa, ma'lumot to'plang; ma'lumot foydasiz bo'lib qolganda, uxlang.
 
 quote}}
 
 {{index [program, "nature of"], data}}
 
-A program is many things. It is a piece of text typed by a programmer,
-it is the directing force that makes the computer do what it does, it
-is data in the computer's memory, yet it controls the actions
-performed on this same memory. Analogies that try to compare programs
-to objects we are familiar with tend to fall short. A superficially
-fitting one is that of a machine—lots of separate parts tend to be
-involved, and to make the whole thing tick, we have to consider the
-ways in which these parts interconnect and contribute to the operation
-of the whole.
+Dastur juda ko'p narsalardan iborat. Bu dasturchi tomonidan yozilgan matn bo'lib, u kompyuterni o'zi bajaradigan ishni qilishga majburlovchi va yo'naltiruvchi kuchdir, u kompyuter xotirasidagi ma'lumotlardir, lekin shu bilan birqatorda u xuddi shu xotirada bajariladigan amallarni boshqaradi ham. Dasturlarni bizga tanish bo'lgan obyektlar bilan solishtirishga harakat qiladigan tahlillar biz kutgan natijani bermaydi. Yuzaki mos keladigan tahlillar asosan  qurilmaga oid bo'lib, unda juda ko'p alohida qismlar ishtirok etadi va hamma narsani aniq qilish uchun biz ushbu qismlarning o'zaro bog'lanishi va butun holda ishlashiga hissa qo'shish usullarini ko'rib chiqishimiz kerak.
 
-A ((computer)) is a physical machine that acts as a host for these immaterial
-machines. Computers themselves can do only stupidly straightforward
-things. The reason they are so useful is that they do these things at
-an incredibly high ((speed)). A program can ingeniously combine an
-enormous number of these simple actions to do very
-complicated things.
+((Kompyuter)) nomoddiy mashinalar uchun xost vazifasini bajaradigan jismoniy mashinadir. Kompyuterlarning o'zi faqatgina hayratlanarli darajada sodda va to'g'ri ishlarnigina amalga oshira oladi. Ularning juda foydali ekanligining sababi shundaki, ular bu ishlarni nihoyatda yuqori ((tezlik))da bajaradilar. Dastur bo'lsa o'z o'rnida juda murakkab ishlarni bajarish uchun ushbu oddiy harakatlarning juda ko'p sonini mohirona birlashtira oladi.
 
 {{index [programming, "joy of"]}}
 
-A program is a building of thought. It is costless to build, it is
-weightless, and it grows easily under our typing hands.
+Dastur fikr homashyosi asosida vujudga keladi. Uni yaratish katta mablag' talab qilmaydi, u hech qanday og'irlikka ham ega emas, va u bizning matn yozayotgan qo'llarimiz ostoda osongina rivojlanib boradi
 
-But without care, a program's size and ((complexity)) will grow out of
-control, confusing even the person who created it. Keeping programs
-under control is the main problem of programming. When a program
-works, it is beautiful. The art of programming is the skill of
-controlling complexity. The great program is subdued—made simple in
-its complexity.
+Lekin dastur yetarlicha nazorat ostida bo'lmasauning  hajmi va ((murakkabligi)) nazoratdan chiqib ketadi va hatto uni yaratgan odamni ham chalkashtirib yuboradi. Dasturlashning asosiy muammosi ham ularni nazorat ostida ushlab turishdir. Dasturning go'zalligi uning yaxshi ishlashida. Dasturlash san'ati murakkablikni boshqarish qobiliyatidir. Ajoyib dastur shu murakkablik ichida sodda va tushunarli bo'ladi.
 
 {{index "programming style", "best practices"}}
 
-Some programmers believe that this complexity is best managed by using
-only a small set of well-understood techniques in their programs. They
-have composed strict rules ("best practices") prescribing the form
-programs should have and carefully stay within their safe little
-zone.
+Ba'zi dasturchilar bu murakkablikni o'z dasturlarida yaxshi tushunilgan kichik texnikalar to'plamidan foydalangan holda eng yaxshi tarzda boshqarishga ishonishadi. Ular qat'iy qoidalarni ("eng yaxshi amaliyotlar") tuzib, dasturlarda bo'lishi kerak bo'lgan shakllarni belgilab qo'ydilar va ehtiyotkorlik bilan o'zlarining xavfsiz zonalarida qolishdi.
 
 {{index experiment}}
 
-This is not only boring, it is ineffective. New problems often
-require new solutions. The field of programming is young and still
-developing rapidly, and it is varied enough to have room for wildly
-different approaches. There are many terrible mistakes to make in
-program design, and you should go ahead and make them so that you
-understand them. A sense of what a good program looks like is
-developed in practice, not learned from a list of rules.
+Lekin bu nafaqat zerikarli, balki samarasiz usul hamdir. Yangi muammolar ko'pincha yangi yechimlarni talab qiladi. Dasturlash sohasi yosh va hali ham jadal rivojlanmoqda va u juda xilma-xil yondashuvlarga ega. Dasturni loyihalashda ko'plab dahshatli xatolarga yo'l qo'yiladi va siz ularni tushunishingiz uchun oldinga borishingiz kerak. Yaxshi dastur qanday ko'rinishini his qilish qoidalar ro'yxatidan o'rganilmaydi, amalda ishlab chiqiladi.
 
 ## Why language matters
 
 {{index "programming language", "machine code", "binary data"}}
 
-In the beginning, at the birth of computing, there were no programming
-languages. Programs looked something like this:
+Dastlab, hisoblash texnikasi paydo bo'lganida, dasturlash tillari mavjud emas edi. Dasturlar quyidagi ko'rinishga ega bo'lgan:
 
 ```{lang: null}
 00110001 00000000 00000000
@@ -164,43 +91,29 @@ languages. Programs looked something like this:
 
 {{index [programming, "history of"], "punch card", complexity}}
 
-That is a program to add the numbers from 1 to 10 together and print
-out the result: `1 + 2 + ... + 10 = 55`. It could run on a simple,
-hypothetical machine. To program early computers, it was necessary to
-set large arrays of switches in the right position or punch holes in
-strips of cardboard and feed them to the computer. You can probably
-imagine how tedious and error-prone this procedure was. Even writing
-simple programs required much cleverness and discipline. Complex ones
-were nearly inconceivable.
+Bu 1 dan 10 gacha raqamlarni qo'shish va natijani chop etish uchun dastur: `1 + 2 + ... + 10 = 55'. U oddiy, virtual mashinada ishlash imkoniyatiga ega bo'lgan. Dastlabki kompyuterlarni dasturlash uchun katta hajmli svitchlarni to'g'ri chiziq bo'ylab o'rnatish yoki karton lentalarida teshiklarni teshib, ularni kompyuterga berish kerak edi. Ushbu jarayon qanchalik zerikarli va xatolarga moyilligini tasavvur qilishingiz mumkin. Hatto oddiy dasturlarni yozish ham juda katta aql va intizomni talab qilardi. Murakkab dasturlarni esa deyarli tasavvur qilib bo'lmas edi.
 
 {{index bit, "wizard (mighty)"}}
 
-Of course, manually entering these arcane patterns of bits (the ones
-and zeros) did give the programmer a profound sense of being a mighty
-wizard. And that has to be worth something in terms of job
-satisfaction.
+Albatta, bitlarning (bir va nol) bu sirli tuzilmasi  qo'lda kiritish dasturchiga kuchli sehrgar bo'lish hissini berdi. Va bu ishdan qoniqish nuqtai nazaridan qaralganda juda katta natija edi.
 
 {{index memory, instruction}}
 
-Each line of the previous program contains a single instruction. It
-could be written in English like this:
+Oldingi dasturning har bir satri bitta ko'rsatmani o'z ichiga oladi. Va u ko'rsatmlarni quyidagicha ifodalash mumkin
 
- 1. Store the number 0 in memory location 0.
- 2. Store the number 1 in memory location 1.
- 3. Store the value of memory location 1 in memory location 2.
- 4. Subtract the number 11 from the value in memory location 2.
- 5. If the value in memory location 2 is the number 0,
-    continue with instruction 9.
- 6. Add the value of memory location 1 to memory location 0.
- 7. Add the number 1 to the value of memory location 1.
- 8. Continue with instruction 3.
- 9. Output the value of memory location 0.
+ 1. 0 raqamini 0-xotira joyida saqlang.
+  2. 1-raqamni 1-xotirada saqlang.
+  3. 1-xotira joyining qiymatini 2-xotira joyida saqlang.
+  4. 2-xotira joyidagi qiymatdan 11 raqamini ayiring.
+  5. Agar 2-xotira joyidagi qiymat 0 raqami bo'lsa, 9-ko'rsatma bilan davom eting.
+  6. Xotira joyi 1 bo'lgan qiymatni 0-xotira joyiga qo'shing.
+  7. Xotira joyi 1 bo'lgan qiymatga 1 raqamini qo'shing.
+  8. 3-ko'rsatma bilan davom eting.
+  9. Xotira joyi 0 bo'lgan qiymatni chop eting.
 
 {{index readability, naming, binding}}
 
-Although that is already more readable than the soup of bits, it is
-still rather obscure. Using names instead of numbers for the
-instructions and memory locations helps.
+Ushbu ko'rsatmalar nol va birdan tashkil topgan bitlar yig'indisidan ko'ra o'qilishi osonroq bo'lsa-da, u hali ham noaniq. Ko'rsatmalar va xotira joylari uchun raqamlar o'rniga nomlardan foydalanish yanada yaxshiroq tushunishga yordam beradi.
 
 ```{lang: "text/plain"}
  Set “total” to 0.
@@ -218,21 +131,9 @@ instructions and memory locations helps.
 
 {{index loop, jump, "summing example"}}
 
-Can you see how the program works at this point? The first two lines
-give two memory locations their starting values: `total` will be used
-to build up the result of the computation, and `count` will keep track
-of the number that we are currently looking at. The lines using
-`compare` are probably the weirdest ones. The program wants to see
-whether `count` is equal to 11 to decide whether it can stop
-running. Because our hypothetical machine is rather primitive, it can
-only test whether a number is zero and make a decision based
-on that. So it uses the memory location labeled `compare` to compute
-the value of `count - 11` and makes a decision based on that value.
-The next two lines add the value of `count` to the result and
-increment `count` by 1 every time the program has decided that `count`
-is not 11 yet.
+Ushbu nuqtada dastur qanday ishlashini ko'rasizmi? Birinchi ikkita satr ikkita xotira joyining boshlang'ich qiymatlarini beradi: "jami" hisoblash natijasini yaratish uchun ishlatiladi va "count" biz hozir ko'rayotgan raqamni kuzatib boradi. "Taqqoslash" dan foydalanadigan chiziqlar, ehtimol, eng g'alati bo'lganlardir. Dastur ishlashni to'xtata oladimi yoki yo'qligini hal qilish uchun "hisoblash" 11 ga teng yoki yo'qligini ko'rishni xohlaydi. Bizning faraziy mashinamiz ancha ibtidoiy bo'lgani uchun u faqat raqamning nolga teng yoki yo'qligini tekshira oladi va shunga asoslanib qaror qabul qiladi. Shunday qilib, u "hisoblash - 11" qiymatini hisoblash va shu qiymat asosida qaror qabul qilish uchun "taqqoslash" etiketli xotira joyidan foydalanadi. Keyingi ikkita satr natijaga “hisoblash” qiymatini qo'shadi va har safar dastur “hisoblash” hali 11 emas deb qaror qilganda “hisoblash” ni 1 ga oshiradi.
 
-Here is the same program in JavaScript:
+Bu yerda ayni dasturning JavaScriptdagi ko'rinishi aks ettirilgan
 
 ```
 let total = 0, count = 1;
@@ -246,27 +147,15 @@ console.log(total);
 
 {{index "while loop", loop, [braces, block]}}
 
-This version gives us a few more improvements. Most important, there
-is no need to specify the way we want the program to jump back and
-forth anymore. The `while` construct takes care of that. It continues
-executing the block (wrapped in braces) below it as long as the
-condition it was given holds. That condition is `count <= 10`, which
-means “_count_ is less than or equal to 10”. We no longer have to
-create a temporary value and compare that to zero, which was just an
-uninteresting detail. Part of the power of programming languages is
-that they can take care of uninteresting details for us.
+Bu versiya bizga yana yangi ko'proq imkoniyatlar yaratib beradi. Eng muhimi, dasturning oldinga va orqaga o'tib amallarni bajarish usullarini belgilashning hojati yo'q. Buni "while" konstruktsiyasi bajaradi. U berilgan shart bajarilgunga qadar uning ostidagi blokni (qavslarga o'ralgan) bajarishda davom etadi. Bu shart `count <= 10` bo'lib, bu "_count_ 10 dan kichik yoki teng" degan ma'noni anglatadi. Biz endi  shunchaki qiziq bo'lmagan tafsilot sifatida vaqtinchalik qiymat yaratishimiz va uni nolga solishtirishimiz shart emas. Dasturlash tillarining kuchli taraflaridan biri shundaki, ular biz uchun qiziq bo'lmagan tafsilotlarni mustaqil hal qila oladi.
 
 {{index "console.log"}}
 
-At the end of the program, after the `while` construct has finished,
-the `console.log` operation is used to write out the result.
+Dastur oxirida `while` konstruktsiyasi tugallangandan so'ng, natijani yozish uchun `console.log` operatsiyasidan foydalaniladi.
 
 {{index "sum function", "range function", abstraction, function}}
 
-Finally, here is what the program could look like if we happened to
-have the convenient operations `range` and `sum` available, which
-respectively create a ((collection)) of numbers within a range and
-compute the sum of a collection of numbers:
+Va nihoyat, agar bizda mos ravishda diapazondagi raqamlarning ((to'plam))ini yaratadigan va raqamlar to'plamining yig'indisini hisoblaydigan qulay “range” va “sum” amallari mavjud bo'lsa, dastur qanday ko'rinishga ega bo'lishi mumkin:
 
 ```{startCode: true}
 console.log(sum(range(1, 10)));
@@ -275,21 +164,11 @@ console.log(sum(range(1, 10)));
 
 {{index readability}}
 
-The moral of this story is that the same program can be expressed in
-both long and short, unreadable and readable ways. The first version of the
-program was extremely obscure, whereas this last one is almost
-English: `log` the `sum` of the `range` of numbers from 1 to 10. (We
-will see in [later chapters](data) how to define operations like `sum`
-and `range`.)
+Yuqoridagi holatdan shuni xulosa qilish mumkinki, bir xil dastur ham uzun, ham qisqa, o'qilmaydigan va o'qilishi mumkin bo'lgan tarzda ifodalanishi mumkin. Dasturning birinchi versiyasi juda noaniq edi, oxirgisi esa deyarli inglizcha: 1 dan 10 gacha bo'lgan "`range`" sonlarni  `sum`(yig'indisini) `log` (kiriting)  (Biz [keyingi boblarda](ma'lumotlar) `sum` va `range` kabi amallarni qanday e'lon qilinishini ko'rib chiqamiz.)
 
 {{index ["programming language", "power of"], composability}}
 
-A good programming language helps the programmer by allowing them to
-talk about the actions that the computer has to perform on a higher
-level. It helps omit details, provides convenient building blocks
-(such as `while` and `console.log`), allows you to define your own
-building blocks (such as `sum` and `range`), and makes those blocks
-easy to compose.
+Yaxshi dasturlash tili dasturchiga kompyuter yuqori darajada bajarishi kerak bo'lgan harakatlar haqida gapirishga imkon beradi. Bu tafsilotlarni o'tkazib yuborishga yordam beradi, qulay dastur qurilishi uchun bloklarni taqdim etadi (masalan, `while` va `console.log`), o'z qurilish bloklarini (masalan, `sum` va `range`) aniqlashga imkon beradi va bu bloklarni tuzishni osonlashtiradi. .
 
 ## What is JavaScript?
 
@@ -299,111 +178,49 @@ easy to compose.
 
 {{indexsee Web, "World Wide Web"}}
 
-JavaScript was introduced in 1995 as a way to add programs to web
-pages in the Netscape Navigator browser. The language has since been
-adopted by all other major graphical web browsers. It has made modern
-web applications possible—applications with which you can interact
-directly without doing a page reload for every action. JavaScript is also
-used in more traditional websites to provide various forms of
-interactivity and cleverness.
+JavaScript 1995 yilda Netscape Navigator brauzerida veb-sahifalarga dasturlar qo'shish usuli sifatida taqdim etilgan. O'shandan beri til boshqa barcha asosiy grafik veb-brauzerlar tomonidan qabul qilingan. Bu zamonaviy veb-ilovalarni - har bir harakat uchun sahifani qayta yuklamasdan to'g'ridan-to'g'ri ishlashingiz mumkin bo'lgan ilovalarni yaratishga imkon berdi. JavaScript ham an'anaviy veb-saytlarda interaktivlik va aqllilikning turli shakllarini ta'minlash uchun ishlatiladi.
 
 {{index Java, naming}}
 
-It is important to note that JavaScript has almost nothing to do with
-the programming language named Java. The similar name was inspired by
-marketing considerations rather than good judgment. When JavaScript
-was being introduced, the Java language was being heavily marketed and
-was gaining popularity. Someone thought it was a good idea to try to
-ride along on this success. Now we are stuck with the name.
+Shuni ta'kidlash kerakki, JavaScript Java deb nomlangan dasturlash tiliga deyarli hech qanday aloqasi yo'q. Shunchaki markting nuqtai nazaridan yetarlicha o'ylab chiqmasdan yaxshi nom tanlangan. JavaScript vujudga kelgan vaqtda, Java dasturlash tili juda ko'p sotildi va mashhurlikka erishdi. Kimdir bu muvaffaqiyatga erishish uchun harakatnig yaxshi usuli deb fikr bildirdi. Hozirda biz faqat ularning nomi haqida o'ylayapmiz.
 
 {{index ECMAScript, compatibility}}
 
-After its adoption outside of Netscape, a ((standard)) document was
-written to describe the way the JavaScript language should work so
-that the various pieces of software that claimed to support JavaScript
-were actually talking about the same language. This is called the
-ECMAScript standard, after the Ecma International organization that
-did the standardization. In practice, the terms ECMAScript and
-JavaScript can be used interchangeably—they are two names for the same
-language.
+Netscape'dan tashqarida qabul qilingandan so'ng, ((standart)) hujjat JavaScript tilini qo'llab-quvvatlaydigan turli xil dasturiy ta'minot qismlari aslida bir xil til haqida gaplashishi uchun JavaScript tilining ishlash usulini tasvirlash uchun yozilgan. Bu standartlashtirishni amalga oshirgan Ecma International tashkiloti nomi bilan ECMAScript standarti deb ataladi. Amalda, ECMAScript va JavaScript atamalari bir-birining o'rnida ishlatilishi mumkin - ular bir xil til uchun ikkita nomdir.
 
 {{index [JavaScript, "weaknesses of"], debugging}}
 
-There are those who will say _terrible_ things about JavaScript. Many
-of these things are true. When I was required to write something in
-JavaScript for the first time, I quickly came to despise it. It would
-accept almost anything I typed but interpret it in a way that was
-completely different from what I meant. This had a lot to do with the
-fact that I did not have a clue what I was doing, of course, but there
-is a real issue here: JavaScript is ridiculously liberal in what it
-allows. The idea behind this design was that it would make programming
-in JavaScript easier for beginners. In actuality, it mostly makes
-finding problems in your programs harder because the system will not
-point them out to you.
+JavaScript haqida _salbiy_ fikr bildiradiganlar uchrab turadi. Va bu gaplarning aksariyati haqiqat. Mendan birinchi marta JavaScript-da biror narsa yozishni talab qilishganda, men tezda undan nafratlana boshladim. Dastur men yozgan deyarli hamma buyruqni qabul qilar, lekin uni men nazarda tutganimdan butunlay boshqacha tarzda talqin qilardi. Bu men dastur bilan nima qilayotganimni bilmasligim bilan bog'liq muammo edi, albatta, lekin bu yerda boshqa haqiqiy muammo ham bor: JavaScript ruxsat bergan narsada yuqori darajada liberaldir. Ushbu dizayndan maqsad yangi foydalanuvchilar uchun JavaScript-da dasturlashni osonlashtirish edi. Aslida, bu dasturlardagi muammolarni topishni qiyinlashtiradi, chunki tizim ularni foydalanuvchiga ko'rsatmaydi.
 
 {{index [JavaScript, "flexibility of"], flexibility}}
 
-This flexibility also has its advantages, though. It leaves space for
-a lot of techniques that are impossible in more rigid languages, and
-as you will see (for example in [Chapter ?](modules)), it can be used
-to overcome some of JavaScript's shortcomings. After ((learning)) the
-language properly and working with it for a while, I have learned to
-actually _like_ JavaScript.
+Biroq, bu moslashuvchanlikning afzalliklari ham bor. Bu murakkab tillarda imkonsiz bo'lgan ko'plab texnikalar uchun imoniyat yaratadi, va siz ko'rib turganingizdek (masalan, [Chapter ?](modullar)) JavaScript-ning ba'zi kamchiliklarini bartaraf etish uchun ishlatilishi mumkin. Tilni to'g'ri ((o'rgangan)) va u bilan bir muddat ishlaganimdan so'ng, men JavaScript-ni _yoqtirishni_ o'rgandim.
 
 {{index future, [JavaScript, "versions of"], ECMAScript, "ECMAScript 6"}}
 
-There have been several versions of JavaScript. ECMAScript version 3
-was the widely supported version in the time of JavaScript's ascent to
-dominance, roughly between 2000 and 2010. During this time, work was
-underway on an ambitious version 4, which planned a number of radical
-improvements and extensions to the language. Changing a living, widely
-used language in such a radical way turned out to be politically
-difficult, and work on the version 4 was abandoned in 2008, leading to
-a much less ambitious version 5, which made only some uncontroversial
-improvements, coming out in 2009. Then in 2015 version 6 came out, a
-major update that included some of the ideas planned for version 4.
-Since then we've had new, small updates every year.
+JavaScript-ning bir nechta versiyalari mavjud. ECMAScript-ning 3-versiyasi JavaScript-ni eng ommaviy darajaga ko'tarilishi davrida, taxminan 2000 va 2010 yillar oralig'ida keng qo'llab-quvvatlanadigan versiya edi. Bu vaqt ichida tilni bir qator tubdan yaxshilash va kengaytmalarni rejalashtirilgan 4-versiyasi ustida ish olib borildi. Keng qo'llaniladigan tilni bunday tubdan o'zgartirish siyosiy jihatdan qiyin bo'lib chiqdi va 4-versiya ustida ishlash 2008 yilda to'xtatildi, bu esa 2009 yilda paydo bo'lgan juda kam ambitsiyali 5-versiyasiga olib keldi. Keyin 2015-yilda 6-versiya chiqdi, u 4-versiya uchun rejalashtirilgan baʼzi gʻoyalarni oʻz ichiga olgan katta yangilanishlarni  o'z ichiga oladi.
+Shu yildan boshlab har yili uning versiyasida kichik o'zgarishlar bo'lib turadi.
 
-The fact that the language is evolving means that browsers have to
-constantly keep up, and if you're using an older browser, it may not
-support every feature. The language designers are careful to not make
-any changes that could break existing programs, so new browsers can
-still run old programs. In this book, I'm using the 2017 version of
-JavaScript.
+Tilning rivojlanayotgani, brauzerlar doimo yangilanib turishi kerakligini anglatadi va agar siz eski brauzerdan foydalansangiz, u barcha funksiyalarni qo'llab-quvvatlamasligi mumkin. Til dizaynerlari mavjud dasturlarni buzishi mumkin bo'lgan o'zgarishlarni amalga oshirishdan ehtiyot bo'lishadi, shuning uchun yangi brauzerlar hali ham eski dasturlarni ishga tushirishlari mumkin. Ushbu kitobda JavaScript-ning 2017 versiyasidan foydalanilgan.
 
 {{index [JavaScript, "uses of"]}}
 
-Web browsers are not the only platforms on which JavaScript is used.
-Some databases, such as MongoDB and CouchDB, use JavaScript as their
-scripting and query language. Several platforms for desktop and server
-programming, most notably the ((Node.js)) project (the subject of
-[Chapter ?](node)), provide an environment for programming JavaScript
-outside of the browser.
+Veb-brauzerlar JavaScript ishlatiladigan yagona platformalar emas. MongoDB va CouchDB kabi ba'zi ma'lumotlar bazalari JavaScript-ni skript va so'rovlar tili sifatida ishlatadilar. Ish stoli va server dasturlash uchun bir nechta platformalar, ayniqsa ((Node.js)) loyihasi ([Chapter ?](node) mavzusi), brauzerdan tashqari JavaScript-ni dasturlash uchun muhitni ta'minlaydi.
 
 ## Code, and what to do with it
 
 {{index "reading code", "writing code"}}
 
-_Code_ is the text that makes up programs. Most chapters in this book
-contain quite a lot of code. I believe reading code and writing ((code))
-are indispensable parts of ((learning)) to program. Try to not just
-glance over the examples—read them attentively and understand them.
-This may be slow and confusing at first, but I promise that you'll
-quickly get the hang of it. The same goes for the ((exercises)). Don't
-assume you understand them until you've actually written a working
+_Kod_ - bu dasturlarni tashkil etuvchi matn. Ushbu kitobning aksariyat boblarida juda ko'p kod mavjud. Men kodni o'qish va yozish ((kod)) dasturlashning ((o'rganish)) ajralmas qismi ekanligiga ishonaman. Misollarni ko'rib chiqmaslikka harakat qiling - ularni diqqat bilan o'qing va tushuning. Avvaliga bu sekin va chalkash bo'lishi mumkin, lekin men va'da qilamanki, siz buni tezda o'zlashtirasiz. Xuddi shu narsa ((mashqlar)) uchun ham amal qiladi. Ishchi yechimni yozmaguningizcha, ularni tushunasiz deb o'ylamang.
 solution.
 
 {{index interpretation}}
 
-I recommend you try your solutions to exercises in an actual
-JavaScript interpreter. That way, you'll get immediate feedback on
-whether what you are doing is working, and, I hope, you'll be tempted
-to ((experiment)) and go beyond the exercises.
+Men sizga haqiqiy JavaScript tarjimonida mashqlar yechimlarini sinab ko'rishni tavsiya qilaman. Shunday qilib, qilayotgan ishingiz ish beryaptimi yoki yo‘qmi degan zudlik bilan fikr-mulohaza olasiz va umid qilamanki, siz ((tajriba)) vasvasasiga tushib, mashqlardan tashqariga chiqasiz.
 
 {{if interactive
 
-When reading this book in your browser, you can edit (and run) all
-example programs by clicking them.
+Ushbu kitobni brauzeringizda o'qiyotganda, siz barcha misol dasturlarni ularni bosish orqali tahrirlashingiz (va ishga tushirishingiz) mumkin.
 
 if}}
 
@@ -411,87 +228,35 @@ if}}
 
 {{index download, sandbox, "running code"}}
 
-The easiest way to run the example code in the book, and to experiment
-with it, is to look it up in the online version of the book at
-[_https://eloquentjavascript.net_](https://eloquentjavascript.net/). There,
-you can click any code example to edit and run it and to see the
-output it produces. To work on the exercises, go to
-[_https://eloquentjavascript.net/code_](https://eloquentjavascript.net/code),
-which provides starting code for each coding exercise and allows you
-to look at the solutions.
+Kitobdagi misol kodini ishga tushirish va u bilan tajriba o‘tkazishning eng oson yo‘li uni kitobning onlayn versiyasida [_https://eloquentjavascript.net_] (https://eloquentjavascript.net/) orqali izlashdir. U erda siz har qanday kod misolini bosishingiz va uni tahrirlash va ishga tushirishingiz va u ishlab chiqaradigan natijani ko'rishingiz mumkin. Mashqlar ustida ishlash uchun [_https://eloquentjavascript.net/code_] (https://eloquentjavascript.net/code) saytiga o'ting, bu har bir kodlash mashqi uchun boshlang'ich kodni taqdim etadi va yechimlarni ko'rib chiqishga imkon beradi.
 
 if}}
 
 {{index "developer tools", "JavaScript console"}}
 
-If you want to run the programs defined in this book outside of the
-book's website, some care will be required. Many examples stand on their
-own and should work in any JavaScript environment. But code in later
-chapters is often written for a specific environment (the browser or
-Node.js) and can run only there. In addition, many chapters define
-bigger programs, and the pieces of code that appear in them depend on
-each other or on external files. The
-[sandbox](https://eloquentjavascript.net/code) on the website provides
-links to Zip files containing all the scripts and data files
-necessary to run the code for a given chapter.
+Agar siz ushbu kitobda belgilangan dasturlarni kitob veb-saytidan tashqarida ishga tushirishni istasangiz, biroz ehtiyot bo'lishingiz kerak bo'ladi. Ko'pgina misollar o'z-o'zidan va har qanday JavaScript muhitida ishlashi kerak. Ammo keyingi boblardagi kod ko'pincha ma'lum bir muhit uchun (brauzer yoki Node.js) yoziladi va faqat u erda ishlashi mumkin. Bundan tashqari, ko'pgina boblar kattaroq dasturlarni belgilaydi va ulardagi kod qismlari bir-biriga yoki tashqi fayllarga bog'liq. Veb-saytdagi [sandbox](https://eloquentjavascript.net/code) ma'lum bo'lim uchun kodni ishga tushirish uchun zarur bo'lgan barcha skriptlar va ma'lumotlar fayllarini o'z ichiga olgan Zip fayllarga havolalarni taqdim etadi.                              
 
 ## Overview of this book
 
-This book contains roughly three parts. The first 12 chapters discuss
-the JavaScript language. The next seven chapters are about web
-((browsers)) and the way JavaScript is used to program them. Finally,
-two chapters are devoted to ((Node.js)), another environment to
-program JavaScript in.
+UUshbu kitob taxminan uch qismdan iborat. Birinchi 12 bobda JavaScript tili muhokama qilinadi. Keyingi yetti bob veb ((brauzerlar)) va ularni dasturlashda JavaScript dan foydalanish usullari haqida. Nihoyat, ikkita bob ((Node.js)), JavaScript-ni dasturlash uchun boshqa muhitga bag'ishlangan.
+Kitob davomida beshta _loyiha boblari_ mavjud bo'lib, ular sizga haqiqiy dasturlashning ta'mini berish uchun kattaroq misol dasturlarini tavsiflaydi. Tashqi ko'rinishi bo'yicha biz [etkazib berish roboti](robot), [dasturlash tili](til), [platforma o'yini](o'yin), [piksel bo'yoq dasturi](bo'yoq) va [ yaratish orqali ishlaymiz. dinamik veb-sayt](mahorat almashish).
+Kitobning til qismi JavaScript tilining asosiy tuzilishi bilan tanishtiruvchi to'rtta bobdan boshlanadi. Ular [boshqaruv ]tuzilmalari (dastur_strukturasi) (masalan, ushbu kirishda ko'rgan "while" so'zi), [funktsiyalar](funktsiyalar) (o'z qurilish bloklarini yozish) va [ma'lumotlar tuzilmalari](ma'lumotlar)ni joriy qiladi. Shundan so'ng siz asosiy dasturlarni yozishingiz mumkin bo'ladi. Keyingi, boblar [? ](yuqori_tartib) va [?](ob'ekt) ko'proq _abstrakt_ kod yozish va murakkablikni nazorat ostida ushlab turish uchun funktsiyalar va ob'ektlardan foydalanish usullarini joriy qiladi.
+[Birinchi loyiha bobidan](robot) soʻng kitobning til qismi [xatolarni qayta ishlash va xatolarni tuzatish](xato), [muntazam ifodalar](regexp) (matn bilan ishlash uchun muhim vosita), [” boʻlimlari bilan davom etadi. modullilik](modullar) (murakkablikka qarshi boshqa himoya) va [asinxron dasturlash](async) (vaqt talab qiladigan hodisalar bilan ishlash). Loyihaning [ikkinchi bobi](til) kitobning birinchi qismini yakunlaydi.
 
-Throughout the book, there are five _project chapters_, which describe
-larger example programs to give you a taste of actual programming. In
-order of appearance, we will work through building a [delivery
-robot](robot), a [programming language](language), a [platform
-game](game), a [pixel paint program](paint), and a [dynamic
-website](skillsharing).
+Ikkinchi qism, boblar [? ](brauzer) dan [?](paint) ga, JavaScript brauzeriga kirish huquqiga ega vositalarni tavsiflaydi. Siz narsalarni ekranda ko‘rsatishni ([?](dom) va [? (kanvas) bo‘limlari), foydalanuvchi kiritishiga javob berishni ([bo‘lim ?](voqea)) va tarmoq orqali muloqot qilishni o‘rganasiz ([bob ?] (http)). Ushbu qismda yana ikkita loyiha bobi mavjud.
 
-The language part of the book starts with four chapters that introduce
-the basic structure of the JavaScript language. They introduce
-[control structures](program_structure) (such as the `while` word you
-saw in this introduction), [functions](functions) (writing your own
-building blocks), and [data structures](data). After these, you will
-be able to write basic programs. Next, Chapters [?](higher_order) and
-[?](object) introduce techniques to use functions and objects to write
-more _abstract_ code and keep complexity under control.
-
-After a [first project chapter](robot), the language part of the book
-continues with chapters on [error handling and bug fixing](error),
-[regular expressions](regexp) (an important tool for working with
-text), [modularity](modules) (another defense against complexity), and
-[asynchronous programming](async) (dealing with events that take
-time). The [second project chapter](language) concludes the first part
-of the book.
-
-The second part, Chapters [?](browser) to [?](paint), describes the
-tools that browser JavaScript has access to. You'll learn to display
-things on the screen (Chapters [?](dom) and [?](canvas)), respond to
-user input ([Chapter ?](event)), and communicate over the network
-([Chapter ?](http)). There are again two project chapters in this
-part.
-
-After that, [Chapter ?](node) describes Node.js, and [Chapter
-?](skillsharing) builds a small website using that tool.
+Shundan so'ng, [bo'lim ?](tugun) Node.js-ni tavsiflaydi va [bo'lim ?](skllsharing) ushbu vosita yordamida kichik veb-sayt yaratadi.
 
 {{if commercial
 
-Finally, [Chapter ?](fast) describes some of the considerations that
-come up when optimizing JavaScript programs for speed.
-
+Nihoyat, [bob?](tezkor) JavaScript dasturlarini tezlik uchun optimallashtirishda yuzaga keladigan ba'zi fikrlarni tavsiflaydi.
 if}}
 
 ## Typographic conventions
 
 {{index "factorial function"}}
 
-In this book, text written in a `monospaced` font will represent
-elements of programs—sometimes they are self-sufficient fragments, and
-sometimes they just refer to part of a nearby program. Programs (of
-which you have already seen a few) are written as follows:
+Ushbu kitobda "bir bo'shliqli" shriftda yozilgan matn dasturlarning elementlarini ifodalaydi - ba'zida ular o'z-o'zidan etarli bo'lgan qismlardir va ba'zida ular faqat yaqin atrofdagi dasturning bir qismiga ishora qiladi. Dasturlar (ulardan bir nechtasini allaqachon ko'rgansiz) quyidagicha yozilgan:
 
 ```
 function factorial(n) {
@@ -505,9 +270,7 @@ function factorial(n) {
 
 {{index "console.log"}}
 
-Sometimes, to show the output that a program produces, the
-expected output is written after it, with two slashes and an arrow in
-front.
+Ba'zan, dastur ishlab chiqaradigan natijani ko'rsatish uchun, kutilgan natija undan keyin ikkita qiyshiq chiziq va oldida o'q bilan yoziladi.
 
 ```
 console.log(factorial(8));

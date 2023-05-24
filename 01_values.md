@@ -4,11 +4,7 @@
 
 {{quote {author: "Master Yuan-Ma", title: "The Book of Programming", chapter: true}
 
-Below the surface of the machine, the program moves. Without effort,
-it expands and contracts. In great harmony, electrons scatter and
-regroup. The forms on the monitor are but ripples on the water. The
-essence stays invisibly below.
-
+Mashinaning yuzasi ostida dastur harakat qiladi. Harakat qilmasdan, u kengayadi va qisqaradi. Katta uyg'unlikda elektronlar tarqaladi va qayta guruhlanadi. Monitordagi shakllar faqat suv ustidagi to'lqinlardir. Mohiyat ko'rinmas holda quyida qoladi.
 quote}}
 
 {{index "Yuan-Ma", "Book of Programming"}}
@@ -17,74 +13,42 @@ quote}}
 
 {{index "binary data", data, bit, memory}}
 
-Inside the computer's world, there is only data. You can read data,
-modify data, create new data—but that which isn't data cannot be
-mentioned. All this data is stored as long sequences of bits and is
-thus fundamentally alike.
+Kompyuter dunyosida faqat ma'lumotlar mavjud. Siz ma'lumotlarni o'qishingiz, ma'lumotlarni o'zgartirishingiz, yangi ma'lumotlarni yaratishingiz mumkin, ammo ma'lumot bo'lmagan narsalarni eslatib bo'lmaydi. Bu ma'lumotlarning barchasi bitlarning uzun ketma-ketligi sifatida saqlanadi va shuning uchun printsipial jihatdan o'xshashdir.
 
 {{index CD, signal}}
 
-_Bits_ are any kind of two-valued things, usually described as zeros and
-ones. Inside the computer, they take forms such as a high or low
-electrical charge, a strong or weak signal, or a shiny or dull spot on
-the surface of a CD. Any piece of discrete information can be reduced
-to a sequence of zeros and ones and thus represented in bits.
+_Bits_ har qanday ikki qiymatli narsalar bo'lib, odatda nol va birliklar sifatida tavsiflanadi. Kompyuterning ichida ular yuqori yoki past elektr zaryadi, kuchli yoki zaif signal yoki CD yuzasida porloq yoki xira nuqta kabi shakllarni oladi. Diskret ma'lumotlarning har qanday qismi nol va birlar ketma-ketligiga qisqartirilishi va shu bilan bitlarda ifodalanishi mumkin.
 
 {{index "binary number", radix, "decimal number"}}
 
-For example, we can express the number 13 in bits. It works the same
-way as a decimal number, but instead of 10 different ((digit))s, you
-have only 2, and the weight of each increases by a factor of 2 from
-right to left. Here are the bits that make up the number 13, with the
-weights of the digits shown below them:
+Masalan, 13 raqamini bit bilan ifodalashimiz mumkin. U o'nlik son bilan bir xil ishlaydi, lekin 10 xil ((raqam)) o'rniga sizda faqat 2 bor va har birining og'irligi o'ngdan chapga 2 marta ortadi. Mana 13 raqamini tashkil etuvchi bitlar, ularning ostida raqamlarning og'irligi ko'rsatilgan:
 
 ```{lang: null}
    0   0   0   0   1   1   0   1
  128  64  32  16   8   4   2   1
 ```
 
-So that's the binary number 00001101. Its non-zero digits stand for
-8, 4, and 1, and add up to 13.
+Demak, bu ikkilik raqam 00001101. Uning nolga teng bo'lmagan raqamlari 8, 4 va 1 ni bildiradi va qo'shilib 13 ga etadi.
 
 ## Values
 
 {{index [memory, organization], "volatile data storage", "hard drive"}}
 
-Imagine a sea of bits—an ocean of them. A typical modern computer has
-more than 30 billion bits in its volatile data storage (working
-memory). Nonvolatile storage (the hard disk or equivalent) tends to
-have yet a few orders of magnitude more.
+Bitlar dengizini tasavvur qiling - ularning okeani. Oddiy zamonaviy kompyuterda o'zgaruvchan ma'lumotlarni saqlashda (ishchi xotira) 30 milliarddan ortiq bit mavjud. O'zgaruvchan xotira (qattiq disk yoki ekvivalenti) odatda bir necha marta ko'proq kattalikka ega.
 
-To be able to work with such quantities of bits without getting lost,
-we must separate them into chunks that represent pieces of
-information. In a JavaScript environment, those chunks are called
-_((value))s_. Though all values are made of bits, they play different
-roles. Every value has a ((type)) that determines its role. Some
-values are numbers, some values are pieces of text, some values are
-functions, and so on.
+Bunday miqdordagi bitlar bilan yo'qolmasdan ishlash uchun biz ularni ma'lumot bo'laklarini ifodalovchi qismlarga ajratishimiz kerak. JavaScript muhitida bu qismlar _((qiymat))s_ deb ataladi. Garchi barcha qiymatlar bitlardan iborat bo'lsa-da, ular turli rollarni o'ynaydi. Har bir qiymat o'z rolini belgilaydigan ((turi)) ga ega. Ayrim qiymatlar raqamlar, ba'zi qiymatlar matn bo'laklari, ba'zi qiymatlar funksiyalar va hokazo.
 
 {{index "garbage collection"}}
 
-To create a value, you must merely invoke its name. This is
-convenient. You don't have to gather building material for your values
-or pay for them. You just call for one, and _whoosh_, you have it. They
-are not really created from thin air, of course. Every value has to be
-stored somewhere, and if you want to use a gigantic amount of them at
-the same time, you might run out of memory. Fortunately, this is a
-problem only if you need them all simultaneously. As soon as you no
-longer use a value, it will dissipate, leaving behind its bits to be
-recycled as building material for the next generation of values.
+Qiymat yaratish uchun siz shunchaki uning nomini chaqirishingiz kerak. Bu qulay. Siz o'zingizning qadriyatlaringiz uchun qurilish materialini yig'ishingiz yoki ular uchun pul to'lashingiz shart emas. Siz shunchaki bitta chaqirasiz va _whoosh_, sizda bor. Ular, albatta, havodan yaratilmagan. Har bir qiymat biror joyda saqlanishi kerak va agar siz ularning katta miqdorini bir vaqtning o'zida ishlatmoqchi bo'lsangiz, xotirangiz tugashi mumkin. Yaxshiyamki, bu bir vaqtning o'zida hammasi kerak bo'lgandagina muammo. Siz boshqa qiymatdan foydalanmasligingiz bilan, u o'z qismlarini keyingi avlod qadriyatlari uchun qurilish materiali sifatida qayta ishlash uchun qoldirib, tarqalib ketadi.
 
-This chapter introduces the atomic elements of JavaScript programs,
-that is, the simple value types and the operators that can act on such
-values.
+Ushbu bobda JavaScript dasturlarining atom elementlari, ya'ni oddiy qiymat turlari va bunday qiymatlar ustida ishlay oladigan operatorlar tanishtiriladi.
 
 ## Numbers
 
 {{index [syntax, number], number, [number, notation]}}
 
-Values of the _number_ type are, unsurprisingly, numeric values. In a
-JavaScript program, they are written as follows:
+_son_ turidagi qiymatlar, ajablanarli emas, raqamli qiymatlardir. JavaScript dasturida ular quyidagicha yoziladi:
 
 ```
 13
@@ -92,40 +56,20 @@ JavaScript program, they are written as follows:
 
 {{index "binary number"}}
 
-Use that in a program, and it will cause the bit pattern for the
-number 13 to come into existence inside the computer's memory.
+Buni dasturda ishlating va u kompyuter xotirasida 13 raqami uchun bit naqshini paydo bo'lishiga olib keladi.
 
 {{index [number, representation], bit}}
 
-JavaScript uses a fixed number of bits, 64 of them, to store a
-single number value. There are only so many patterns you can make with
-64 bits, which means that the number of different numbers that can be
-represented is limited. With _N_ decimal ((digit))s, you can represent
-10^N^ numbers. Similarly, given 64 binary
-digits, you can represent 2^64^ different numbers, which is about 18
-quintillion (an 18 with 18 zeros after it). That's a lot.
+JavaScript bitta raqam qiymatini saqlash uchun ma'lum miqdordagi bitlardan foydalanadi, ulardan 64 tasi. 64 bit bilan yaratishingiz mumkin bo'lgan naqshlar juda ko'p, ya'ni ifodalanishi mumkin bo'lgan turli raqamlar soni cheklangan. _N_ o'nlik ((raqam)) bilan siz 10^N^ sonni ifodalashingiz mumkin. Xuddi shunday, 64 ta ikkilik raqamni hisobga olsak, siz 2^64^ turli xil raqamlarni ifodalashingiz mumkin, bu taxminan 18 kvintillion (18, undan keyin 18 nol bilan). Bu juda ko'p.
 
-Computer memory used to be much smaller, and people tended to use
-groups of 8 or 16 bits to represent their numbers. It was easy to
-accidentally _((overflow))_ such small numbers—to end up with a number
-that did not fit into the given number of bits. Today, even computers
-that fit in your pocket have plenty of memory, so you are free to use
-64-bit chunks, and you need to worry about overflow only when dealing
-with truly astronomical numbers.
+Ilgari kompyuter xotirasi ancha kichikroq edi va odamlar o'z raqamlarini ifodalash uchun 8 yoki 16 bitli guruhlardan foydalanishga moyil edilar. Bunday kichik raqamlarni tasodifan _((toshib ketish))_ oson bo'lgan - berilgan bitlar soniga to'g'ri kelmaydigan raqam bilan yakunlanadi. Bugungi kunda, hatto cho'ntagingizga sig'adigan kompyuterlar ham juda ko'p xotiraga ega, shuning uchun siz 64-bitli qismlardan foydalanishingiz mumkin va siz faqat astronomik raqamlar bilan ishlaganda to'lib ketish haqida tashvishlanishingiz kerak.
 
 {{index sign, "floating-point number", "sign bit"}}
 
-Not all whole numbers less than 18 quintillion fit in a JavaScript number,
-though. Those bits also store negative numbers, so one bit indicates
-the sign of the number. A bigger issue is that nonwhole numbers must
-also be represented. To do this, some of the bits are used to store
-the position of the decimal point. The actual maximum whole number
-that can be stored is more in the range of 9 quadrillion (15
-zeros)—which is still pleasantly huge.
+18 kvintilliondan kam bo'lgan barcha butun sonlar JavaScript raqamiga mos kelmaydi. Bu bitlar manfiy raqamlarni ham saqlaydi, shuning uchun bitta bit raqamning belgisini bildiradi. Kattaroq muammo shundaki, butun bo'lmagan raqamlar ham ifodalanishi kerak. Buning uchun ba'zi bitlar kasr o'rnini saqlash uchun ishlatiladi. Saqlanishi mumkin bo'lgan haqiqiy maksimal butun son 9 kvadrillion (15 nol) oralig'ida ko'proq - bu hali ham yoqimli darajada katta.
 
 {{index [number, notation], "fractional number"}}
-
-Fractional numbers are written by using a dot.
+Kasr sonlar nuqta yordamida yoziladi.
 
 ```
 9.81
@@ -133,53 +77,34 @@ Fractional numbers are written by using a dot.
 
 {{index exponent, "scientific notation", [number, notation]}}
 
-For very big or very small numbers, you may also use scientific
-notation by adding an _e_ (for _exponent_), followed by the exponent
-of the number.
+Juda katta yoki juda kichik raqamlar uchun _e_ (_eksponent_ uchun) qo'shib, keyin raqamning ko'rsatkichini qo'shish orqali ilmiy belgilardan ham foydalanishingiz mumkin.
 
 ```
 2.998e8
 ```
 
-That is 2.998 × 10^8^ = 299,800,000.
+Bu  2.998 × 10^8^ = 299,800,000 ni anglatadi
 
 {{index pi, [number, "precision of"], "floating-point number"}}
 
-Calculations with whole numbers (also called _((integer))s_) smaller
-than the aforementioned 9 quadrillion are guaranteed to always be
-precise. Unfortunately, calculations with fractional numbers are
-generally not. Just as π (pi) cannot be precisely expressed by a
-finite number of decimal digits, many numbers lose some precision when
-only 64 bits are available to store them. This is a shame, but it
-causes practical problems only in specific situations. The important
-thing is to be aware of it and treat fractional digital numbers as
-approximations, not as precise values.
+Yuqorida aytib o'tilgan 9 kvadrilliondan kichik butun sonlar (shuningdek, _((integer))s_ deb ataladi) bilan hisoblar har doim aniq bo'lishi kafolatlanadi. Afsuski, kasr raqamlari bilan hisob-kitoblar odatda emas. P (pi) ni o'nlik sonli sonlar bilan aniq ifodalab bo'lmagani kabi, ularni saqlash uchun faqat 64 bit mavjud bo'lsa, ko'p sonlar aniqligini yo'qotadi. Bu sharmandalik, lekin u faqat muayyan vaziyatlarda amaliy muammolarni keltirib chiqaradi. Muhimi, bundan xabardor bo'lish va kasrli raqamli raqamlarga aniq qiymatlar sifatida emas, balki yaqinlashish sifatida qarashdir.
 
 ### Arithmetic
 
 {{index [syntax, operator], operator, "binary operator", arithmetic, addition, multiplication}}
 
-The main thing to do with numbers is arithmetic. Arithmetic operations
-such as addition or multiplication take two number values and produce
-a new number from them. Here is what they look like in JavaScript:
-
+Raqamlar bilan bog'liq asosiy narsa arifmetikdir. Qo'shish yoki ko'paytirish kabi arifmetik amallar ikkita raqam qiymatini oladi va ulardan yangi son hosil qiladi. Mana ular JavaScript-da qanday ko'rinishga ega:
 ```
 100 + 4 * 11
 ```
 
 {{index [operator, application], asterisk, "plus character", "* operator", "+ operator"}}
 
-The `+` and `*` symbols are called _operators_. The first stands for
-addition, and the second stands for multiplication. Putting an
-operator between two values will apply it to those values and produce
-a new value.
+`+` va `*` belgilari _operatorlar_ deb ataladi. Birinchisi qo'shishni, ikkinchisi esa ko'paytirishni anglatadi. Operatorni ikkita qiymat orasiga qo'yish uni ushbu qiymatlarga qo'llaydi va yangi qiymat hosil qiladi.
 
 {{index grouping, parentheses, precedence}}
 
-But does the example mean "add 4 and 100, and multiply the result by 11,"
-or is the multiplication done before the adding? As you might have
-guessed, the multiplication happens first. But as in mathematics, you
-can change this by wrapping the addition in parentheses.
+Ammo misol "4 va 100 ni qo'shing va natijani 11 ga ko'paytiring" degan ma'noni anglatadimi yoki ko'paytirish qo'shishdan oldin amalga oshiriladimi? Siz taxmin qilganingizdek, ko'payish birinchi bo'lib sodir bo'ladi. Ammo matematikada bo'lgani kabi, qo'shimchani qavs ichiga o'rash orqali buni o'zgartirishingiz mumkin.
 
 ```
 (100 + 4) * 11
@@ -190,48 +115,27 @@ can change this by wrapping the addition in parentheses.
 For subtraction, there is the `-` operator, and division can be done
 with the `/` operator.
 
-When operators appear together without parentheses, the order in which
-they are applied is determined by the _((precedence))_ of the
-operators. The example shows that multiplication comes before
-addition. The `/` operator has the same precedence as `*`. Likewise
-for `+` and `-`. When multiple operators with the same precedence
-appear next to each other, as in `1 - 2 + 1`, they are applied left to
-right: `(1 - 2) + 1`.
+Operatorlar qavssiz birga paydo bo'lganda, ularni qo'llash tartibi operatorlarning _((ustunlik))_ bilan belgilanadi. Misol ko'paytirish qo'shishdan oldin kelishini ko'rsatadi. `/` operatori `*` bilan bir xil ustunlikka ega. `+` va `-` uchun ham xuddi shunday. `1 - 2 + 1` da bo'lgani kabi bir xil ustunlikka ega bir nechta operatorlar yonma-yon paydo bo'lganda, ular chapdan o'ngga qo'llaniladi: `(1 - 2) + 1`.
 
-These rules of precedence are not something you should worry about.
-When in doubt, just add parentheses.
+Ushbu ustuvorlik qoidalari sizni tashvishga soladigan narsa emas. Agar shubhangiz bo'lsa, shunchaki qavslar qo'shing.
 
 {{index "modulo operator", division, "remainder operator", "% operator"}}
 
-There is one more arithmetic operator, which you might not immediately
-recognize. The `%` symbol is used to represent the _remainder_
-operation. `X % Y` is the remainder of dividing `X` by `Y`. For
-example, `314 % 100` produces `14`, and `144 % 12` gives `0`.
-The remainder operator's precedence is the same as that of multiplication and
-division. You'll also often see this operator referred to as _modulo_.
+Yana bitta arifmetik operator bor, uni darhol taniy olmasligingiz mumkin. `%` belgisi _remainder_ operatsiyasini ifodalash uchun ishlatiladi. `X % Y` - `X`ni `Y`ga bo`lishning qolgan qismi. Masalan, `314 % 100` `14` ni, `144 % 12` esa `0`ni beradi. Qolgan operatorning ustuvorligi ko'paytirish va bo'lish bilan bir xil. _modulo_ deb ataladigan ushbu operatorni ham tez-tez ko'rasiz.
 
 ### Special numbers
 
 {{index [number, "special values"]}}
 
-There are three special values in JavaScript that are considered
-numbers but don't behave like normal numbers.
+JavaScript-da uchta maxsus qiymat mavjud bo'lib, ular raqamlar deb hisoblanadi, lekin oddiy raqamlar kabi harakat qilmaydi.
 
 {{index infinity}}
 
-The first two are `Infinity` and `-Infinity`, which represent the
-positive and negative infinities. `Infinity - 1` is still `Infinity`,
-and so on. Don't put too much trust in infinity-based computation,
-though. It isn't mathematically sound, and it will quickly lead to the
-next special number: `NaN`.
+Birinchi ikkitasi 'Infinity' va ' Infinity' bo'lib, ular ijobiy va salbiy cheksizliklarni ifodalaydi. `Infinity - 1` hali ham `Infinity` va hokazo. Biroq, cheksizlikka asoslangan hisob-kitoblarga juda ko'p ishonmang. Bu matematik jihatdan to'g'ri emas va u tezda keyingi maxsus raqamga olib keladi: `NaN'.
 
 {{index NaN, "not a number", "division by zero"}}
 
-`NaN` stands for "not a number", even though it _is_ a value of the
-number type. You'll get this result when you, for example, try to
-calculate `0 / 0` (zero divided by zero), `Infinity - Infinity`, or
-any number of other numeric operations that don't yield a meaningful
-result.
+`NaN` "raqam emas" degan ma'noni anglatadi, garchi u raqam turining qiymati bo'lsa ham. Siz, masalan, `0/0` (nol nolga bo`lingan), `Infinity - Infinity` yoki mazmunli natija bermaydigan boshqa raqamli amallarni hisoblashga harakat qilganingizda bu natijaga erishasiz.
 
 ## Strings
 
@@ -239,8 +143,8 @@ result.
 
 {{index [syntax, string], text, character, [string, notation], "single-quote character", "double-quote character", "quotation mark", backtick}}
 
-The next basic data type is the _((string))_. Strings are used to
-represent text. They are written by enclosing their content in quotes.
+Keyingi asosiy ma'lumotlar turi _((string))_. Satrlar ishlatiladi
+matnni ifodalaydi. Ular o'z mazmunini qo'shtirnoq ichiga olish orqali yoziladi.
 
 ```
 `Down on the sea`
@@ -248,29 +152,18 @@ represent text. They are written by enclosing their content in quotes.
 'Float on the ocean'
 ```
 
-You can use single quotes, double quotes, or backticks to mark
-strings, as long as the quotes at the start and the end of the string
-match.
+Satrning boshida va oxiridagi qo'shtirnoqlar bir-biriga mos kelsa, satrlarni belgilash uchun bitta tirnoq, qo'sh tirnoq yoki teskari belgilardan foydalanishingiz mumkin.
 
 {{index "line break", "newline character"}}
 
-Almost anything can be put between quotes, and JavaScript will make a
-string value out of it. But a few characters are more difficult. You
-can imagine how putting quotes between quotes might be hard.
-_Newlines_ (the characters you get when you press [enter]{keyname}) can be
-included without escaping only when the string is quoted with backticks
+Qo'shtirnoq orasiga deyarli hamma narsani qo'yish mumkin va JavaScript undan string qiymatini yaratadi. Ammo bir nechta belgilar qiyinroq. Qo'shtirnoq orasiga qo'shtirnoq qo'yish qanchalik qiyin bo'lishi mumkinligini tasavvur qilishingiz mumkin. _Newlines_ ([enter]{keyname} tugmachasini bosganingizda olinadigan belgilar) faqat satr teskari belgilar bilan iqtibos qilinganda qochmasdan kiritilishi mumkin.
 (`` ` ``).
 
 {{index [escaping, "in strings"], ["backslash character", "in strings"]}}
 
-To make it possible to include such characters in a string, the
-following notation is used: whenever a backslash (`\`) is found inside
-quoted text, it indicates that the character after it has a special
-meaning. This is called _escaping_ the character. A quote that is
-preceded by a backslash will not end the string but be part of it.
-When an `n` character occurs after a backslash, it is interpreted as a
-newline. Similarly, a `t` after a backslash means a ((tab character)).
-Take the following string:
+Bunday belgilarni satrga kiritish imkoniyatini yaratish uchun quyidagi belgi qo'llaniladi: iqtibosli matn ichida teskari chiziq (`\`) topilsa, undan keyingi belgi alohida ma'noga ega ekanligini bildiradi. Bu belgidan _qochish_ deyiladi. Teskari qiyshiq chiziq oldidan kelgan tirnoq satrni tugatmaydi, balki uning bir qismi bo'ladi. Teskari chiziqdan keyin `n` belgisi paydo bo'lsa, u yangi qator sifatida talqin qilinadi. Xuddi shunday, teskari chiziqdan keyin `t` belgisi ((tab belgisi)) degan ma'noni anglatadi.
+
+Quyidagi qatorni oling:
 
 ```
 "This is the first line\nAnd this is the second"
@@ -283,11 +176,7 @@ This is the first line
 And this is the second
 ```
 
-There are, of course, situations where you want a backslash in a
-string to be just a backslash, not a special code. If two backslashes
-follow each other, they will collapse together, and only one will be
-left in the resulting string value. This is how the string "_A newline
-character is written like `"`\n`"`._" can be expressed:
+Albatta, qatordagi teskari chiziq maxsus kod emas, balki faqat teskari chiziq bo'lishini xohlaydigan vaziyatlar mavjud. Agar ikkita teskari chiziq bir-birining ortidan kelsa, ular birgalikda yiqilib tushadi va natijada olingan satr qiymatida faqat bittasi qoladi. "_Yangi qator belgisi `"`\n`"`._ kabi yoziladi" qatorini shunday ifodalash mumkin:
 
 ```
 "A newline character is written like \"\\n\"."
@@ -297,62 +186,35 @@ character is written like `"`\n`"`._" can be expressed:
 
 {{index [string, representation], Unicode, character}}
 
-Strings, too, have to be modeled as a series of bits to be able to
-exist inside the computer. The way JavaScript does this is based on
-the _((Unicode))_ standard. This standard assigns a number to
-virtually every character you would ever need, including characters
-from Greek, Arabic, Japanese, Armenian, and so on. If we have a number
-for every character, a string can be described by a sequence of
-numbers.
+Satrlar ham kompyuter ichida mavjud bo'lishi uchun bir qator bitlar sifatida modellashtirilishi kerak. JavaScript-ning buni amalga oshirish usuli _((Unicode))_ standartiga asoslanadi. Ushbu standart sizga kerak bo'lgan deyarli barcha belgilarga raqam beradi, jumladan yunon, arab, yapon, arman va boshqalar. Agar bizda har bir belgi uchun raqam bo'lsa, qatorni raqamlar ketma-ketligi bilan tasvirlash mumkin.
 
 {{index "UTF-16", emoji}}
 
-And that's what JavaScript does. But there's a complication:
-JavaScript's representation uses 16 bits per string element, which can
-describe up to 2^16^ different characters. But Unicode defines more
-characters than that—about twice as many, at this point. So some
-characters, such as many emoji, take up two "character positions" in
-JavaScript strings. We'll come back to this in [Chapter
-?](higher_order#code_units).
+Va JavaScript shunday qiladi. Ammo bir murakkablik bor: JavaScript-ning taqdimoti har bir satr elementi uchun 16 bitdan foydalanadi, bu esa 2^16^ gacha turli belgilarni tavsiflashi mumkin. Ammo Unicode bundan ko'proq belgilarni aniqlaydi - hozirgi paytda ikki baravar ko'p. Shunday qilib, ba'zi belgilar, masalan, ko'plab emojilar JavaScript satrlarida ikkita "belgi o'rnini" egallaydi. Biz bunga [bob ?](yuqori_tartib#kod_birliklari)da qaytamiz.
 
 {{index "+ operator", concatenation}}
 
-Strings cannot be divided, multiplied, or subtracted, but the `+`
-operator _can_ be used on them. It does not add, but it
-_concatenates_—it glues two strings together. The following line will
-produce the string `"concatenate"`:
+Satrlarni bo'lish, ko'paytirish yoki ayirish mumkin emas, lekin ularda `+` operatori _ ishlatilishi mumkin. U qo'shmaydi, lekin u _birlashtiradi_—ikkita ipni bir-biriga yopishtiradi. Quyidagi satr "birlashtiruvchi" qatorini hosil qiladi:
 
 ```
 "con" + "cat" + "e" + "nate"
 ```
 
-String values have a number of associated functions (_methods_) that
-can be used to perform other operations on them. I'll say more about
-these in [Chapter ?](data#methods).
-
+String qiymatlari ular ustida boshqa operatsiyalarni bajarish uchun ishlatilishi mumkin bo'lgan bir qator bog'langan funktsiyalarga (_methods_) ega. Bular haqida ko'proq [bo'lim?](ma'lumotlar#metodlar)da aytib o'taman.
 {{index interpolation, backtick}}
 
-Strings written with single or double quotes behave very much the
-same—the only difference is in which type of quote you need to escape
-inside of them. Backtick-quoted strings, usually called _((template
-literals))_, can do a few more tricks. Apart from being able to span
-lines, they can also embed other values.
-
+Bitta yoki qo'sh tirnoq bilan yozilgan satrlar deyarli bir xil bo'ladi - yagona farq ularning ichida qaysi turdagi tirnoqdan qochish kerakligida. Odatda _((shablon literallari))_ deb ataladigan backtick iqtibosli satrlari yana bir nechta fokuslarni bajarishi mumkin. Chiziqlarni kengaytirish imkoniyatidan tashqari, ular boshqa qiymatlarni ham joylashtirishlari mumkin.
 ```
 `half of 100 is ${100 / 2}`
 ```
 
-When you write something inside `${}` in a template literal, its
-result will be computed, converted to a string, and included at that
-position. The example produces "_half of 100 is 50_".
+Shablon literalida “${}” ichiga biror narsa yozsangiz, uning natijasi hisoblab chiqiladi, satrga aylantiriladi va shu pozitsiyaga kiritiladi. Misol "100 ning _yarmi 50_" ni hosil qiladi.
 
 ## Unary operators
 
 {{index operator, "typeof operator", type}}
 
-Not all operators are symbols. Some are written as words. One example
-is the `typeof` operator, which produces a string value naming the
-type of the value you give it.
+Hamma operatorlar ham belgilar emas. Ba'zilari so'z sifatida yoziladi. Bir misol, siz bergan qiymat turini nomlovchi satr qiymatini ishlab chiqaradigan `typeof` operatori.
 
 ```
 console.log(typeof 4.5)
@@ -365,17 +227,11 @@ console.log(typeof "x")
 
 {{id "console.log"}}
 
-We will use `console.log` in example code to indicate that we want to
-see the result of evaluating something. More about that in the [next
-chapter](program_structure).
+Biz biror narsani baholash natijasini ko'rishni xohlayotganimizni ko'rsatish uchun misol kodida "console.log" dan foydalanamiz. Bu haqda ko'proq [keyingi bobda](dastur_structure).
 
 {{index negation, "- operator", "binary operator", "unary operator"}}
 
-The other operators shown all operated on two values, but `typeof`
-takes only one. Operators that use two values are called _binary_
-operators, while those that take one are called _unary_ operators. The
-minus operator can be used both as a binary operator and as a unary
-operator.
+Ko'rsatilgan boshqa operatorlarning barchasi ikkita qiymatda ishlaydi, ammo "typeof" faqat bitta qiymatni oladi. Ikki qiymatdan foydalanadigan operatorlar _binary_ operatorlar, bittasini oladiganlar esa _unary_ operatorlar deb ataladi. Minus operatoridan ikkilik operator sifatida ham, unar operator sifatida ham foydalanish mumkin.
 
 ```
 console.log(- (10 - 2))
@@ -386,16 +242,13 @@ console.log(- (10 - 2))
 
 {{index Boolean, operator, true, false, bit}}
 
-It is often useful to have a value that distinguishes between only two
-possibilities, like "yes" and "no" or "on" and "off". For this
-purpose, JavaScript has a _Boolean_ type, which has just two values,
-true and false, which are written as those words.
+Ko'pincha "ha" va "yo'q" yoki "yoqish" va "o'chirish" kabi ikkita imkoniyatni ajratib turadigan qiymatga ega bo'lish foydalidir. Buning uchun JavaScript-da _Boolean_ turi mavjud bo'lib, u faqat ikkita qiymatga ega, haqiqiy va noto'g'ri, ular o'sha so'zlar sifatida yoziladi.
 
 ### Comparison
 
 {{index comparison}}
 
-Here is one way to produce Boolean values:
+Mantiqiy qiymatlarni ishlab chiqarishning bir usuli:
 
 ```
 console.log(3 > 2)
@@ -406,12 +259,11 @@ console.log(3 < 2)
 
 {{index [comparison, "of numbers"], "> operator", "< operator", "greater than", "less than"}}
 
-The `>` and `<` signs are the traditional symbols for "is greater
-than" and "is less than", respectively. They are binary operators.
-Applying them results in a Boolean value that indicates whether they
-hold true in this case.
+`>` va `<` belgilari mos ravishda "kattaroq" va "kichikroq" ning an'anaviy belgilaridir. Ular ikkilik operatorlardir.
 
-Strings can be compared in the same way.
+Ularni qo'llash mantiqiy qiymatga olib keladi, bu ularning bu holatda to'g'riligini ko'rsatadi.
+
+Satrlarni xuddi shu tarzda solishtirish mumkin.
 
 ```
 console.log("Aardvark" < "Zoroaster")
@@ -420,17 +272,11 @@ console.log("Aardvark" < "Zoroaster")
 
 {{index [comparison, "of strings"]}}
 
-The way strings are ordered is roughly alphabetic but not really what
-you'd expect to see in a dictionary: uppercase letters are always
-"less" than lowercase ones, so `"Z" < "a"`, and nonalphabetic
-characters (!, -, and so on) are also included in the ordering. When
-comparing strings, JavaScript goes over the characters from left to
-right, comparing the ((Unicode)) codes one by one.
+Satrlarni tartiblash usuli taxminan alifbo bo'yicha, lekin aslida siz lug'atda ko'rishni kutganingizdek emas: katta harflar har doim kichik harflardan "kamroq" bo'ladi, shuning uchun "Z" < "a"` va alifbo bo'lmagan belgilar (!, - va boshqalar) ham buyurtmaga kiritilgan. Satrlarni solishtirganda, JavaScript ((Unicode)) kodlarni birma-bir taqqoslab, belgilarni chapdan o'ngga o'tadi.
 
 {{index equality, ">= operator", "<= operator", "== operator", "!= operator"}}
 
-Other similar operators are `>=` (greater than or equal to), `<=`
-(less than or equal to), `==` (equal to), and `!=` (not equal to).
+Boshqa shunga o'xshash operatorlar `>=` (katta yoki teng), `<=` (kichik yoki teng), `==` (teng) va `!=` (teng emas).
 
 ```
 console.log("Itchy" != "Scratchy")
@@ -441,30 +287,22 @@ console.log("Apple" == "Orange")
 
 {{index [comparison, "of NaN"], NaN}}
 
-There is only one value in JavaScript that is not equal to itself, and
-that is `NaN` ("not a number").
-
+JavaScript-da o'ziga teng bo'lmagan faqat bitta qiymat mavjud va u "NaN" ("raqam emas").
 ```
 console.log(NaN == NaN)
 // → false
 ```
 
-`NaN` is supposed to denote the result of a nonsensical computation,
-and as such, it isn't equal to the result of any _other_ nonsensical
-computations.
-
+"NaN" bema'ni hisoblash natijasini bildirishi kerak va shuning uchun u hech qanday _boshqa_ bema'ni hisoblar natijasiga teng emas.
 ### Logical operators
 
 {{index reasoning, "logical operators"}}
 
-There are also some operations that can be applied to Boolean values
-themselves. JavaScript supports three logical operators: _and_, _or_,
-and _not_. These can be used to "reason" about Booleans.
+Mantiqiy qiymatlarga nisbatan qo'llanilishi mumkin bo'lgan ba'zi operatsiyalar ham mavjud. JavaScript uchta mantiqiy operatorni qo'llab-quvvatlaydi: _and_, _or_ va _not_. Bular mantiqiy so'zlar haqida "fikrlash" uchun ishlatilishi mumkin.
 
 {{index "&& operator", "logical and"}}
 
-The `&&` operator represents logical _and_. It is a binary operator,
-and its result is true only if both the values given to it are true.
+`&&` operatori mantiqiy _va_ ni ifodalaydi. Bu ikkilik operator bo'lib, unga berilgan ikkala qiymat ham rost bo'lsagina uning natijasi to'g'ri bo'ladi.
 
 ```
 console.log(true && false)
@@ -475,8 +313,7 @@ console.log(true && true)
 
 {{index "|| operator", "logical or"}}
 
-The `||` operator denotes logical _or_. It produces true if either of
-the values given to it is true.
+`||` operatori mantiqiy _yoki_ ni bildiradi. Agar unga berilgan qiymatlardan biri rost bo'lsa, u true hosil qiladi.
 
 ```
 console.log(false || true)
@@ -487,19 +324,11 @@ console.log(false || false)
 
 {{index negation, "! operator"}}
 
-_Not_ is written as an exclamation mark (`!`). It is a unary operator
-that flips the value given to it—`!true` produces `false`, and `!false`
-gives `true`.
+_Not_ undov belgisi (`!`) sifatida yoziladi. Bu unar operator bo'lib, unga berilgan qiymatni o'zgartiradi — `!true` `yolg'on`ni, `!false` esa `true`ni beradi.
 
 {{index precedence}}
 
-When mixing these Boolean operators with arithmetic and other
-operators, it is not always obvious when parentheses are needed. In
-practice, you can usually get by with knowing that of the operators we
-have seen so far, `||` has the lowest precedence, then comes `&&`,
-then the comparison operators (`>`, `==`, and so on), and then the
-rest. This order has been chosen such that, in typical expressions
-like the following one, as few parentheses as possible are necessary:
+Ushbu mantiqiy operatorlarni arifmetik va boshqa operatorlar bilan aralashtirganda, qavslar kerak bo'lganda har doim ham aniq bo'lmaydi. Amalda, odatda, biz hozirgacha ko'rgan operatorlarning `||` eng past ustunlikka ega ekanligini, keyin `&&`, so'ngra taqqoslash operatorlari (`>`, `==` va hokazo), keyin qolganlari. Bu tartib shunday tanlanganki, quyidagi kabi tipik iboralarda iloji boricha kamroq qavs kerak bo'ladi:
 
 ```
 1 + 1 == 2 && 10 * 10 > 50
@@ -507,9 +336,7 @@ like the following one, as few parentheses as possible are necessary:
 
 {{index "conditional execution", "ternary operator", "?: operator", "conditional operator", "colon character", "question mark"}}
 
-The last logical operator I will discuss is not unary, not binary, but
-_ternary_, operating on three values. It is written with a question
-mark and a colon, like this:
+Men muhokama qiladigan oxirgi mantiqiy operator unary emas, ikkilik emas, balki uchta qiymatda ishlaydigan _ternary_ operatoridir. U savol belgisi va ikki nuqta bilan shunday yoziladi:
 
 ```
 console.log(true ? 1 : 2);
@@ -518,36 +345,23 @@ console.log(false ? 1 : 2);
 // → 2
 ```
 
-This one is called the _conditional_ operator (or sometimes just
-the _ternary_ operator since it is the only such operator in the
-language). The value on the left of the question mark "picks" which of
-the other two values will come out. When it is true, it chooses the
-middle value, and when it is false, it chooses the value on the right.
+Bu _shartli_ operator deb ataladi (yoki ba'zan faqat _ternary_ operatori, chunki u tildagi yagona operatordir). Savol belgisining chap tomonidagi qiymat qolgan ikkita qiymatdan qaysi biri chiqishini "tanlaydi". To'g'ri bo'lsa, o'rta qiymatni, noto'g'ri bo'lsa, o'ngdagi qiymatni tanlaydi.
 
 ## Empty values
 
 {{index undefined, null}}
 
-There are two special values, written `null` and `undefined`, that are
-used to denote the absence of a _meaningful_ value. They are
-themselves values, but they carry no information.
+Maʼnoli qiymat yoʻqligini bildirish uchun “null” va “noandefined” deb yozilgan ikkita maxsus qiymat mavjud. Ular o'zlari qadriyatlardir, lekin ular hech qanday ma'lumotga ega emaslar.
 
-Many operations in the language that don't produce a meaningful value
-(you'll see some later) yield `undefined` simply because they have to
-yield _some_ value.
+Ma'noli qiymatni keltirmaydigan tildagi ko'plab operatsiyalar (ba'zilarini keyinroq ko'rasiz) shunchaki "aniqlanmagan" ni beradi, chunki ular _ba'zi_ qiymat berishi kerak.
 
-The difference in meaning between `undefined` and `null` is an accident
-of JavaScript's design, and it doesn't matter most of the time. In cases
-where you actually have to concern yourself with these values, I
-recommend treating them as mostly interchangeable.
+"Aniqlanmagan" va "null" o'rtasidagi ma'no farqi JavaScript dizaynidagi tasodifdir va bu ko'pincha muhim emas. Agar siz haqiqatan ham ushbu qadriyatlar bilan o'zingizni tashvishga solishingiz kerak bo'lsa, men ularni asosan bir-birini almashtiradigan deb hisoblashni tavsiya qilaman.
 
 ## Automatic type conversion
 
 {{index NaN, "type coercion"}}
 
-In the Introduction, I mentioned that JavaScript goes out of its way
-to accept almost any program you give it, even programs that do odd
-things. This is nicely demonstrated by the following expressions:
+Kirish qismida men JavaScript siz bergan deyarli har qanday dasturni, hatto g'alati ishlarni bajaradigan dasturlarni ham qabul qilish uchun o'z yo'lidan chiqib ketishini aytib o'tdim. Bu quyidagi iboralar bilan yaxshi namoyon bo'ladi:
 
 ```
 console.log(8 * null)
@@ -564,33 +378,15 @@ console.log(false == 0)
 
 {{index "+ operator", arithmetic, "* operator", "- operator"}}
 
-When an operator is applied to the "wrong" type of value, JavaScript
-will quietly convert that value to the type it needs, using a set of
-rules that often aren't what you want or expect. This is called
-_((type coercion))_. The `null` in the first expression becomes `0`,
-and the `"5"` in the second expression becomes `5` (from string to
-number). Yet in the third expression, `+` tries string concatenation
-before numeric addition, so the `1` is converted to `"1"` (from number
-to string).
+Agar operator "noto'g'ri" qiymat turiga qo'llanilsa, JavaScript ko'pincha siz xohlagan yoki kutmagan qoidalar to'plamidan foydalanib, bu qiymatni kerakli turga o'zgartiradi. Bunga _((turi majburlash))_ deyiladi. Birinchi ifodadagi “null” “0” ga, ikkinchi ifodadagi “5” esa “5”ga (satrdan raqamga) aylanadi. Uchinchi iborada `+` son qo`shishdan oldin qatorni birlashtirishga harakat qiladi, shuning uchun `1` ``1`` ga (raqamdan qatorga) aylantiriladi.
 
 {{index "type coercion", [number, "conversion to"]}}
 
-When something that doesn't map to a number in an obvious way (such as
-`"five"` or `undefined`) is converted to a number, you get the value
-`NaN`. Further arithmetic operations on `NaN` keep producing `NaN`, so
-if you find yourself getting one of those in an unexpected place, look
-for accidental type conversions.
+Raqamga aniq tarzda mos kelmaydigan narsa (masalan, “besh” yoki “aniqlanmagan”) raqamga aylantirilsa, siz “NaN” qiymatini olasiz. "NaN" bo'yicha keyingi arifmetik operatsiyalar "NaN" ni ishlab chiqarishda davom etadi, shuning uchun agar siz ulardan birini kutilmagan joyda topsangiz, tasodifiy turdagi konvertatsiyalarni qidiring.
 
 {{index null, undefined, [comparison, "of undefined values"], "== operator"}}
 
-When comparing values of the same type using `==`, the outcome is easy
-to predict: you should get true when both values are the same, except
-in the case of `NaN`. But when the types differ, JavaScript uses a
-complicated and confusing set of rules to determine what to do. In
-most cases, it just tries to convert one of the values to the other
-value's type. However, when `null` or `undefined` occurs on either
-side of the operator, it produces true only if both sides are one of
-`null` or `undefined`.
+`==` yordamida bir xil turdagi qiymatlarni solishtirganda, natijani bashorat qilish oson: har ikkala qiymat bir xil bo'lganda haqiqatga erishishingiz kerak, `NaN` hollari bundan mustasno. Ammo turlar har xil bo'lsa, JavaScript nima qilish kerakligini aniqlash uchun murakkab va chalkash qoidalar to'plamidan foydalanadi. Aksariyat hollarda u qiymatlardan birini boshqa qiymat turiga aylantirishga harakat qiladi. Biroq, operatorning har ikki tomonida "null" yoki "aniqlanmagan" bo'lsa, u faqat ikkala tomon "null" yoki "aniqlanmagan" dan biri bo'lsa, rost hosil qiladi.
 
 ```
 console.log(null == undefined);
@@ -599,41 +395,23 @@ console.log(null == 0);
 // → false
 ```
 
-That behavior is often useful. When you want to test whether a value
-has a real value instead of `null` or `undefined`, you can compare it
-to `null` with the `==` (or `!=`) operator.
+Bunday xatti-harakatlar ko'pincha foydalidir. Qiymatning “null” yoki “aniqlanmagan” o‘rniga haqiqiy qiymatga ega ekanligini tekshirmoqchi bo‘lsangiz, uni “==” (yoki “!=`) operatori yordamida “null” bilan solishtirishingiz mumkin.
 
 {{index "type coercion", [Boolean, "conversion to"], "=== operator", "!== operator", comparison}}
 
-But what if you want to test whether something refers to the precise
-value `false`? Expressions like `0 == false` and `"" == false` are
-also true because of automatic type conversion. When you do _not_ want
-any type conversions to happen, there are two additional operators:
-`===` and `!==`. The first tests whether a value is _precisely_ equal
-to the other, and the second tests whether it is not precisely equal.
-So `"" === false` is false as expected.
+Agar biror narsa "false" aniq qiymatiga tegishli yoki yo'qligini tekshirmoqchi bo'lsangiz-chi? `0 == false` va `"" == false` kabi iboralar ham avtomatik turdagi konvertatsiya tufayli rostdir. Har qanday turdagi konvertatsiyalar sodir bo'lishini _xohlamasangiz, ikkita qo'shimcha operator mavjud: `===` va `!==`. Birinchisi, qiymat boshqasiga _aniq teng yoki yo'qligini tekshiradi, ikkinchisi esa uning aniq teng emasligini tekshiradi. Demak, `"" === false` kutilganidek noto'g'ri.
 
-I recommend using the three-character comparison operators defensively to
-prevent unexpected type conversions from tripping you up. But when you're
-certain the types on both sides will be the same, there is no problem with
-using the shorter operators.
+Kutilmagan turdagi konvertatsiyalar sizni qo'zg'atib yubormasligi uchun uchta belgi taqqoslash operatoridan himoyalangan holda foydalanishni tavsiya qilaman. Ammo ikkala tomonning turlari bir xil bo'lishiga ishonchingiz komil bo'lsa, qisqaroq operatorlardan foydalanishda muammo bo'lmaydi.
 
 ### Short-circuiting of logical operators
 
 {{index "type coercion", [Boolean, "conversion to"], operator}}
 
-The logical operators `&&` and `||` handle values of different types
-in a peculiar way. They will convert the value on their left side to
-Boolean type in order to decide what to do, but depending on the
-operator and the result of that conversion, they will return either the
-_original_ left-hand value or the right-hand value.
+`&&` va `||` mantiqiy operatorlari har xil turdagi qiymatlarni o`ziga xos tarzda boshqaradi. Ular nima qilish kerakligini hal qilish uchun chap tomonidagi qiymatni mantiqiy turga o'zgartiradilar, lekin operatorga va ushbu konvertatsiya natijasiga qarab ular _original_ chap tomon qiymatini yoki o'ng qo'l qiymatini qaytaradilar.
 
 {{index "|| operator"}}
 
-The `||` operator, for example, will return the value to its left when
-that can be converted to true and will return the value on its right
-otherwise. This has the expected effect when the values are Boolean
-and does something analogous for values of other types.
+TMasalan, `||` operatori, agar u true ga aylantirilishi mumkin bo'lsa, qiymatni chap tomoniga qaytaradi va aks holda uning o'ng tomonidagi qiymatni qaytaradi. Bu qiymatlar mantiqiy bo'lsa va boshqa turdagi qiymatlar uchun o'xshash biror narsa qilsa, kutilgan ta'sirga ega.
 
 ```
 console.log(null || "user")
@@ -644,47 +422,22 @@ console.log("Agnes" || "user")
 
 {{index "default value"}}
 
-We can use this functionality as a way to fall back on a default
-value. If you have a value that might be empty, you can put `||` after
-it with a replacement value. If the initial value can be converted to
-false, you'll get the replacement instead. The rules for converting
-strings and numbers to Boolean values state that `0`, `NaN`, and the
-empty string (`""`) count as `false`, while all the other values count
-as `true`. So `0 || -1` produces `-1`, and `"" || "!?"` yields `"!?"`.
+Biz ushbu funksiyadan standart qiymatga qaytish usuli sifatida foydalanishimiz mumkin. Agar sizda bo'sh bo'lishi mumkin bo'lgan qiymat bo'lsa, uning o'rniga `||` belgisini qo'yishingiz mumkin. Agar boshlang'ich qiymat noto'g'ri ga aylantirilishi mumkin bo'lsa, siz uning o'rniga almashtirasiz. Satrlar va raqamlarni mantiqiy qiymatlarga aylantirish qoidalari `0`, `NaN` va bo`sh qator (`""`) `yolg`on`, qolgan barcha qiymatlar esa `rost` deb hisoblanadi. Shunday qilib, `0 || -1` `-1` va `"" || hosil qiladi "!?"` `"!?"` beradi.
 
 {{index "&& operator"}}
 
-The `&&` operator works similarly but the other way around. When the
-value to its left is something that converts to false, it returns that
-value, and otherwise it returns the value on its right.
+`&&` operatori xuddi shunday ishlaydi, lekin aksincha. Uning chap tomonidagi qiymat yolg'onga aylanadigan narsa bo'lsa, u bu qiymatni qaytaradi, aks holda u o'ng tomonidagi qiymatni qaytaradi.
 
-Another important property of these two operators is that the part to
-their right is evaluated only when necessary. In the case of `true ||
-X`, no matter what `X` is—even if it's a piece of program that does
-something _terrible_—the result will be true, and `X` is never
-evaluated. The same goes for `false && X`, which is false and will
-ignore `X`. This is called _((short-circuit evaluation))_.
+Ushbu ikki operatorning yana bir muhim xususiyati shundaki, ularning o'ng tomonidagi qism faqat kerak bo'lganda baholanadi. `haqiqiy || holatida X`, `X` nima bo`lishidan qat`i nazar, hatto u dahshatli narsani qiladigan dastur bo`lsa ham, natija haqiqat bo`ladi va `X` hech qachon baholanmaydi. Xuddi shu narsa "false && X" uchun ham amal qiladi, bu noto'g'ri va "X" ni e'tiborsiz qoldiradi. Bunga _((qisqa tutashuvni baholash))_ deyiladi.
 
 {{index "ternary operator", "?: operator", "conditional operator"}}
 
-The conditional operator works in a similar way. Of the second and
-third values, only the one that is selected is evaluated.
+Shartli operator ham xuddi shunday ishlaydi. Ikkinchi va uchinchi qiymatlardan faqat tanlangani baholanadi.
 
 ## Summary
 
-We looked at four types of JavaScript values in this chapter: numbers,
-strings, Booleans, and undefined values.
+Ushbu bobda biz JavaScript qiymatlarining to'rt turini ko'rib chiqdik: raqamlar, satrlar, mantiqiy qiymatlar va aniqlanmagan qiymatlar.
 
-Such values are created by typing in their name (`true`, `null`) or
-value (`13`, `"abc"`). You can combine and transform values with
-operators. We saw binary operators for arithmetic (`+`, `-`, `*`, `/`,
-and `%`), string concatenation (`+`), comparison (`==`, `!=`, `===`,
-`!==`, `<`, `>`, `<=`, `>=`), and logic (`&&`, `||`), as well as
-several unary operators (`-` to negate a number, `!` to negate
-logically, and `typeof` to find a value's type) and a ternary operator
-(`?:`) to pick one of two values based on a third value.
+Bunday qiymatlar ularning nomini (`true`, `null`) yoki qiymatini (`13`, `"abc"`) kiritish orqali yaratiladi. Siz qiymatlarni operatorlar bilan birlashtirishingiz va o'zgartirishingiz mumkin. Biz arifmetik (`+`, `-`, `*`, `/` va `%`), qatorlarni birlashtirish (`+`), taqqoslash (`==`, `!=`, `===`) uchun ikkilik operatorlarni ko'rdik. , `!==`, `<`, `>`, `<=`, `>=`) va mantiq (`&&`, `||`), shuningdek, bir nechta unar operatorlar ( Raqamni inkor qilish uchun `-`, mantiqiy inkor qilish uchun `!` va qiymat turini topish uchun `typeof`) va uchinchi qiymat asosida ikkita qiymatdan birini tanlash uchun uchlik operator (`?:`).
 
-This gives you enough information to use JavaScript as a pocket
-calculator but not much more. The [next
-chapter](program_structure) will start tying
-these expressions together into basic programs.
+Bu sizga JavaScript-ni cho'ntak kalkulyatori sifatida ishlatish uchun etarli ma'lumot beradi, lekin ko'p emas. [Keyingi bob](dastur_structure) bu ifodalarni asosiy dasturlarga birlashtira boshlaydi.

@@ -2,10 +2,7 @@
 
 {{quote {author: "_why", title: "Why's (Poignant) Guide to Ruby", chapter: true}
 
-And my heart glows bright red under my filmy, translucent skin and
-they have to administer 10cc of JavaScript to get me to come back. (I
-respond well to toxins in the blood.) Man, that stuff will kick the
-peaches right out your gills!
+Va mening yuragim shaffof terim ostida yorqin qizil porlaydi va ular meni qaytib kelishim uchun 10cc JavaScript-ni boshqarishlari kerak. (Men qondagi toksinlarga yaxshi javob beraman.) Do'stim, bu narsa juda kuchli.
 
 quote}}
 
@@ -13,82 +10,50 @@ quote}}
 
 {{figure {url: "img/chapter_picture_2.jpg", alt: "Picture of tentacles holding objects", chapter: framed}}}
 
-In this chapter, we will start to do things that can actually be called
-_programming_. We will expand our command of the JavaScript language
-beyond the nouns and sentence fragments we've seen so far, to the
-point where we can express meaningful prose.
+Ushbu bobda biz aslida chaqirilishi mumkin bo'lgan narsalarni qilishni boshlaymiz
+_dasturlash_. Biz JavaScript tilidagi buyruqlarimizni kengaytiramiz
+Biz hozirgacha ko‘rgan ot va gap bo‘laklaridan tashqari, to the
+mazmunli nasrni ifodalay oladigan nuqta.
 
 ## Expressions and statements
 
 {{index grammar, [syntax, expression], [code, "structure of"], grammar, [JavaScript, syntax]}}
 
-In [Chapter ?](values), we made values and applied operators to them
-to get new values. Creating values like this is the main substance of
-any JavaScript program. But that substance has to be framed in a
-larger structure to be useful. So that's what we'll cover next.
+[Bob ?](qiymatlar) da biz qiymatlar yaratdik va yangi qiymatlarni olish uchun ularga operatorlar qoʻlladik. Bu kabi qiymatlarni yaratish har qanday JavaScript dasturining asosiy mazmunidir. Ammo bu modda foydali bo'lishi uchun kattaroq tuzilishga ega bo'lishi kerak. Shunday qilib, biz keyingi mavzuni ko'rib chiqamiz.
 
 {{index "literal expression", [parentheses, expression]}}
 
-A fragment of code that produces a value is called an
-_((expression))_. Every value that is written literally (such as `22`
-or `"psychoanalysis"`) is an expression. An expression between
-parentheses is also an expression, as is a ((binary operator))
-applied to two expressions or a ((unary operator)) applied to one.
+Qiymat hosil qiluvchi kod bo'lagi _((ifoda))_ deb ataladi. To'g'ridan-to'g'ri yozilgan har bir qiymat (masalan, "22" yoki "psixoanaliz") ifodadir. Qavslar orasidagi ifoda ham ikkita ifodaga qo'llaniladigan ((ikkilik operator)) yoki biriga qo'llaniladigan ((birlik operator)) kabi ifodadir.
 
 {{index [nesting, "of expressions"], "human language"}}
 
-This shows part of the beauty of a language-based interface.
-Expressions can contain other expressions in a way similar to how subsentences in human languages are nested—a subsentence can
-contain its own subsentences, and so on. This allows us to build
-expressions that describe arbitrarily complex computations.
+Bu tilga asoslangan interfeysning go'zalligining bir qismini ko'rsatadi. Ifodalar inson tillaridagi ergash gaplar qanday joylashtirilganiga o'xshash boshqa iboralarni o'z ichiga olishi mumkin - ergash gap o'z bo'laklarini o'z ichiga olishi mumkin va hokazo. Bu bizga o'zboshimchalik bilan murakkab hisob-kitoblarni tavsiflovchi ifodalarni yaratishga imkon beradi.
 
 {{index statement, semicolon, program}}
 
-If an expression corresponds to a sentence fragment, a JavaScript
-_statement_ corresponds to a full sentence. A program is a list of
-statements.
+Agar ifoda jumla bo'lagiga mos kelsa, JavaScript _statement_ to'liq jumlaga mos keladi. Dastur - bu bayonotlar ro'yxati.
 
 {{index [syntax, statement]}}
 
-The simplest kind of statement is an expression with a semicolon after
-it. This is a program:
+Eng oddiy gap turi o'zidan keyin nuqta-vergul qo'yilgan ifodadir. Bu dastur:
 
 ```
 1;
 !false;
 ```
 
-It is a useless program, though. An ((expression)) can be content to
-just produce a value, which can then be used by the enclosing code. A
-((statement)) stands on its own, so it amounts to something only if it
-affects the world. It could display something on the screen—that
-counts as changing the world—or it could change the internal state of
-the machine in a way that will affect the statements that come after
-it. These changes are called _((side effect))s_. The statements in the
-previous example just produce the values `1` and `true` and then
-immediately throw them away. This leaves no impression on the world at
-all. When you run this program, nothing observable happens.
+Biroq, bu foydasiz dastur. ((ifoda)) faqat qiymat hosil qilishdan iborat bo'lishi mumkin, undan keyin qo'shimcha kod tomonidan ishlatilishi mumkin. A ((bayonot)) o'z-o'zidan turadi, shuning uchun u dunyoga ta'sir qilsagina biror narsaga aylanadi. U ekranda dunyoni o'zgartiruvchi deb hisoblangan biror narsani ko'rsatishi yoki mashinaning ichki holatini o'zidan keyin keladigan bayonotlarga ta'sir qiladigan tarzda o'zgartirishi mumkin. Bu o'zgarishlar _((yon ta'sir))s_ deb ataladi. Oldingi misoldagi iboralar shunchaki “1” va “true” qiymatlarini hosil qiladi va keyin ularni darhol tashlab yuboradi. Bu dunyoda hech qanday taassurot qoldirmaydi. Ushbu dasturni ishga tushirganingizda, hech narsa kuzatilmaydi.
 
 {{index "programming style", "automatic semicolon insertion", semicolon}}
 
-In some cases, JavaScript allows you to omit the semicolon at the end
-of a statement. In other cases, it has to be there, or the next
-((line)) will be treated as part of the same statement. The rules for
-when it can be safely omitted are somewhat complex and error-prone. So
-in this book, every statement that needs a semicolon will always get
-one. I recommend you do the same, at least until you've learned more
-about the subtleties of missing semicolons.
+Ba'zi hollarda JavaScript bayonot oxirida nuqta-vergul qo'yishga imkon beradi. Boshqa hollarda, u erda bo'lishi kerak yoki keyingi ((satr)) xuddi shu bayonotning bir qismi sifatida ko'rib chiqiladi. Qachon xavfsiz tarzda o'tkazib yuborilishi mumkinligi haqidagi qoidalar biroz murakkab va xatolarga moyil. Shunday qilib, bu kitobda nuqta-vergul kerak bo'lgan har bir bayonot doimo bitta bo'ladi. Men sizga ham xuddi shunday qilishingizni tavsiya qilaman, hech bo'lmaganda, etishmayotgan nuqta-vergullarning nozik jihatlari haqida ko'proq ma'lumotga ega bo'lmaguningizcha.
 
 ## Bindings
 
 {{indexsee variable, binding}}
 {{index [syntax, statement], [binding, definition], "side effect", [memory, organization], [state, in binding]}}
 
-How does a program keep an internal state? How does it remember
-things? We have seen how to produce new values from old values, but
-this does not change the old values, and the new value has to be
-immediately used or it will dissipate again. To catch and hold values,
-JavaScript provides a thing called a _binding_, or _variable_:
+Qanday qilib dastur ichki holatni saqlaydi? U narsalarni qanday eslab qoladi? Biz eski qiymatlardan qanday qilib yangi qiymatlarni ishlab chiqarishni ko'rdik, lekin bu eski qiymatlarni o'zgartirmaydi va yangi qiymat darhol ishlatilishi kerak yoki u yana tarqalib ketadi. Qiymatlarni ushlash va ushlab turish uchun JavaScript _binding_ yoki _variable_ deb nomlangan narsani taqdim etadi:
 
 ```
 let caught = 5 * 5;
@@ -96,17 +61,11 @@ let caught = 5 * 5;
 
 {{index "let keyword"}}
 
-That's a second kind of ((statement)). The special word
-(_((keyword))_) `let` indicates that this sentence is going to define
-a binding. It is followed by the name of the binding and, if we want
-to immediately give it a value, by an `=` operator and an expression.
+Bu ikkinchi turdagi ((bayonot)). Maxsus so'z (_((kalit so'z))_) `let` bu jumla bog'lanishni belgilashini bildiradi. Undan keyin bog‘lanish nomi va agar unga darhol qiymat berishni istasak, `=` operatori va ifoda keladi.
 
-The previous statement creates a binding called `caught` and uses it
-to grab hold of the number that is produced by multiplying 5 by 5.
+Oldingi ibora "tutilgan" deb nomlangan bog'lashni yaratadi va undan 5 ni 5 ga ko'paytirish orqali hosil bo'lgan raqamni ushlab turish uchun foydalanadi.
 
-After a binding has been defined, its name can be used as an
-((expression)). The value of such an expression is the value the
-binding currently holds. Here's an example:
+Bog'lanish aniqlangandan so'ng, uning nomi ((ifoda)) sifatida ishlatilishi mumkin. Bunday iboraning qiymati hozirda bog'lanishning qiymati hisoblanadi. Mana bir misol:
 
 ```
 let ten = 10;
@@ -116,10 +75,7 @@ console.log(ten * ten);
 
 {{index "= operator", assignment, [binding, assignment]}}
 
-When a binding points at a value, that does not mean it is tied to
-that value forever. The `=` operator can be used at any time on
-existing bindings to disconnect them from their current value and have
-them point to a new one.
+Agar bog'lanish qiymatga ishora qilsa, bu uning ushbu qiymatga abadiy bog'langanligini anglatmaydi. `=` operatori istalgan vaqtda mavjud bogʻlanishlarda ularni joriy qiymatidan uzib qoʻyish va yangisiga ishora qilish uchun ishlatilishi mumkin.
 
 ```
 let mood = "light";
@@ -132,15 +88,9 @@ console.log(mood);
 
 {{index [binding, "model of"], "tentacle (analogy)"}}
 
-You should imagine bindings as tentacles, rather than boxes. They do
-not _contain_ values; they _grasp_ them—two bindings can refer to the
-same value. A program can access only the values that it still has a
-reference to. When you need to remember something, you grow a tentacle
-to hold on to it or you reattach one of your existing tentacles to it.
+Bog'lanishlarni qutilar emas, balki tentacles sifatida tasavvur qilishingiz kerak. Ular qiymatlarni _o'z ichiga olmaydi; ular ularni _ushlaydilar - ikkita bog'lanish bir xil qiymatga murojaat qilishi mumkin. Dastur faqat havola qilingan qiymatlarga kirishi mumkin. Biror narsani eslab qolish kerak bo'lganda, siz uni ushlab turish uchun chodirni o'stirasiz yoki mavjud chodirlaringizdan birini unga qayta bog'laysiz.
 
-Let's look at another example. To remember the number of dollars that
-Luigi still owes you, you create a binding. And then when he pays back
-$35, you give this binding a new value.
+Keling, yana bir misolni ko'rib chiqaylik. Luiji sizga hali ham qarzdor bo'lgan dollarlar sonini eslab qolish uchun siz bog'lanishni yaratasiz. Va keyin u 35 dollar to'laganida, siz bu bog'lanishga yangi qiymat berasiz.
 
 ```
 let luigisDebt = 140;
@@ -151,14 +101,11 @@ console.log(luigisDebt);
 
 {{index undefined}}
 
-When you define a binding without giving it a value, the tentacle has
-nothing to grasp, so it ends in thin air. If you ask for the value of
-an empty binding, you'll get the value `undefined`.
+Bog'lanishni unga qiymat bermasdan aniqlaganingizda, tentacle tushunish uchun hech narsaga ega emas, shuning uchun u nozik havoda tugaydi. Agar siz boʻsh bogʻlanish qiymatini soʻrasangiz, “aniqlanmagan” qiymatini olasiz.
 
 {{index "let keyword"}}
 
-A single `let` statement may define multiple bindings. The
-definitions must be separated by commas.
+Bitta "let" iborasi bir nechta bog'lanishlarni belgilashi mumkin. Ta'riflar vergul bilan ajratilishi kerak.
 
 ```
 let one = 1, two = 2;
@@ -166,8 +113,7 @@ console.log(one + two);
 // → 3
 ```
 
-The words `var` and `const` can also be used to create bindings, in a
-way similar to `let`.
+"Var" va "const" so'zlari "let" ga o'xshash tarzda bog'lanishlarni yaratish uchun ham ishlatilishi mumkin.
 
 ```
 var name = "Ayda";
@@ -178,49 +124,29 @@ console.log(greeting + name);
 
 {{index "var keyword"}}
 
-The first, `var` (short for "variable"), is the way bindings were
-declared in pre-2015 JavaScript. I'll get back to the precise way it
-differs from `let` in the [next chapter](functions). For now,
-remember that it mostly does the same thing, but we'll rarely use it
-in this book because it has some confusing properties.
+Birinchisi, “var” (“oʻzgaruvchi”ning qisqartmasi), 2015-yildan oldingi JavaScript-da bogʻlanishlar eʼlon qilingan usuldir. Men [keyingi bobda (funktsiyalar) `let`-dan farqli bo'lgan aniq yo'lga qaytaman. Hozircha, esda tutingki, u asosan bir xil ishni bajaradi, lekin biz uni bu kitobda kamdan-kam ishlatamiz, chunki u ba'zi chalkashliklarga ega.
 
 {{index "const keyword", naming}}
 
-The word `const` stands for _((constant))_. It defines a constant
-binding, which points at the same value for as long as it lives. This
-is useful for bindings that give a name to a value so that you can
-easily refer to it later.
+"Const" so'zi _((doimiy))_ ma'nosini bildiradi. U doimiy bog'lanishni belgilaydi, u umri davomida bir xil qiymatga ishora qiladi. Bu qiymatga nom beradigan bog'lashlar uchun foydali bo'lib, keyinchalik unga osongina murojaat qilishingiz mumkin.
 
 ## Binding names
 
 {{index "underscore character", "dollar sign", [binding, naming]}}
 
-Binding names can be any word. Digits can be part of binding
-names—`catch22` is a valid name, for example—but the name must not
-start with a digit. A binding name may include dollar signs (`$`) or
-underscores (`_`) but no other punctuation or special characters.
+Bog'lovchi nomlar har qanday so'z bo'lishi mumkin. Raqamlar bog'lovchi nomning bir qismi bo'lishi mumkin - `catch22` to'g'ri nom, masalan, lekin nom raqam bilan boshlanmasligi kerak. Majburiy nom dollar belgilarini (`$`) yoki pastki chiziqni (`_`) o`z ichiga olishi mumkin, lekin boshqa tinish belgilari yoki maxsus belgilar bo`lmaydi.
 
 {{index [syntax, identifier], "implements (reserved word)", "interface (reserved word)", "package (reserved word)", "private (reserved word)", "protected (reserved word)", "public (reserved word)", "static (reserved word)", "void operator", "yield (reserved word)", "enum (reserved word)", "reserved word", [binding, naming]}}
 
-Words with a special meaning, such as `let`, are _((keyword))s_, and
-they may not be used as binding names. There are also a number of
-words that are "reserved for use" in ((future)) versions of
-JavaScript, which also can't be used as binding names. The full list
-of keywords and reserved words is rather long.
+“Let” kabi maxsus maʼnoga ega soʻzlar _((kalit soʻz))s_ boʻlib, ularni bogʻlovchi nom sifatida ishlatib boʻlmaydi. JavaScript-ning ((kelajakda)) versiyalarida “foydalanish uchun ajratilgan” bir qancha soʻzlar ham mavjud boʻlib, ularni bogʻlovchi nom sifatida ham ishlatib boʻlmaydi. Kalit so'zlar va zaxiralangan so'zlarning to'liq ro'yxati ancha uzun.
 
 ```{lang: "text/plain"}
-break case catch class const continue debugger default
-delete do else enum export extends false finally for
-function if implements import interface in instanceof let
-new package private protected public return static super
-switch this throw true try typeof var void while with yield
+break case catch class const continue debugger sukut boʻyicha oʻchirish do aks holda enum eksport funksiyasi uchun false nihoyat kengaytiriladi agar import interfeysi instanceof instanceof yangi paketga ruxsat bersin yangi paket xususiy himoyalangan umumiy qaytish statik super switch bu otish haqiqiy urinib koʻring typeof var void yield bilan.
 ```
 
 {{index [syntax, error]}}
 
-Don't worry about memorizing this list. When creating a binding produces
-an unexpected syntax error, see whether you're trying to define a
-reserved word.
+Ushbu ro'yxatni eslab qolishdan tashvishlanmang. Bog'lanishni yaratishda kutilmagan sintaksis xatosi paydo bo'ladi, zaxiralangan so'zni belgilashga harakat qilyapsizmi yoki yo'qligini tekshiring.
 
 ## The environment
 
@@ -241,12 +167,7 @@ currently loaded website and to read ((mouse)) and ((keyboard)) input.
 {{indexsee "calling (of functions)", [function, application]}}
 {{index output, function, [function, application], [browser, environment]}}
 
-A lot of the values provided in the default environment have the type
-_((function))_. A function is a piece of program wrapped in a value.
-Such values can be _applied_ in order to run the wrapped program. For
-example, in a browser environment, the binding `prompt` holds a
-function that shows a little ((dialog box)) asking for user input. It
-is used like this:
+Standart muhitda taqdim etilgan ko'pgina qiymatlar _((funktsiya))_ turiga ega. Funktsiya - bu qiymatga o'ralgan dasturning bir qismi. Bunday qiymatlar o'ralgan dasturni ishga tushirish uchun _qo'llanilishi mumkin. Misol uchun, brauzer muhitida bog'lovchi `so'rov` foydalanuvchi kiritishini so'rab bir oz ((muloqot oynasi)) ko'rsatadigan funktsiyaga ega. U shunday ishlatiladi:
 
 ```
 prompt("Enter passcode");
@@ -256,38 +177,19 @@ prompt("Enter passcode");
 
 {{index parameter, [function, application], [parentheses, arguments]}}
 
-Executing a function is called _invoking_, _calling_, or _applying_
-it. You can call a function by putting parentheses after an
-expression that produces a function value. Usually you'll directly use
-the name of the binding that holds the function. The values between
-the parentheses are given to the program inside the function. In the
-example, the `prompt` function uses the string that we give it as the
-text to show in the dialog box. Values given to functions are called
-_((argument))s_. Different functions might need a different number or
-different types of arguments.
+Funktsiyani bajarish _chaqirish_, _chaqirish_ yoki _qo'llash_ deyiladi. Funktsiya qiymatini hosil qiluvchi ifodadan keyin qavslar qo'yish orqali funktsiyani chaqirishingiz mumkin. Odatda siz to'g'ridan-to'g'ri funktsiyaga ega bo'lgan bog'lash nomidan foydalanasiz. Qavslar orasidagi qiymatlar funksiya ichidagi dasturga beriladi. Misolda, "prompt" funksiyasi dialog oynasida ko'rsatish uchun matn sifatida biz beradigan satrdan foydalanadi. Funksiyalarga berilgan qiymatlar _((argument))s_ deyiladi. Turli funktsiyalar uchun boshqa raqam yoki turli turdagi argumentlar kerak bo'lishi mumkin.
 
-The `prompt` function isn't used much in modern web programming,
-mostly because you have no control over the way the resulting dialog
-looks, but can be helpful in toy programs and experiments.
+“Prompt” funksiyasi zamonaviy veb-dasturlashda unchalik qo'llanilmaydi, chunki siz natijada paydo bo'lgan dialogning ko'rinishini nazorat qila olmaysiz, lekin o'yinchoq dasturlari va tajribalarda foydali bo'lishi mumkin.
 
 ## The console.log function
 
 {{index "JavaScript console", "developer tools", "Node.js", "console.log", output, [browser, environment]}}
 
-In the examples, I used `console.log` to output values. Most JavaScript
-systems (including all modern web browsers and Node.js) provide a
-`console.log` function that writes out its arguments to _some_ text
-output device. In browsers, the output lands in the ((JavaScript
-console)). This part of the browser interface is hidden by default,
-but most browsers open it when you press F12 or, on a Mac, [command]{keyname}-[option]{keyname}-I.
-If that does not work, search through the menus for an item named Developer
-Tools or similar.
+Misollarda men qiymatlarni chiqarish uchun "console.log" dan foydalandim. Ko'pgina JavaScript tizimlari (shu jumladan, barcha zamonaviy veb-brauzerlar va Node.js) o'z argumentlarini _some_ matn chiqarish qurilmasiga yozadigan "console.log" funksiyasini ta'minlaydi. Brauzerlarda chiqish ((JavaScript konsoli)) ga tushadi. Brauzer interfeysining bu qismi sukut bo'yicha yashirin, lekin ko'pchilik brauzerlar uni F12 tugmachasini bosganingizda yoki Mac-da [buyruq {keyname}-[option]{keyname}-I tugmachasini bosganingizda ochadi. Agar bu ishlamasa, menyular orqali Dasturchi vositalari yoki shunga o'xshash narsalarni qidiring.
 
 {{if interactive
 
-When running the examples (or your own code) on the pages of this
-book, `console.log` output will be shown after the example, instead of
-in the browser's JavaScript console.
+Ushbu kitob sahifalarida misollar (yoki o'z kodingiz) ishga tushganda, brauzerning JavaScript konsolida emas, misoldan keyin `console.log` chiqishi ko'rsatiladi.
 
 ```
 let x = 30;
@@ -299,23 +201,14 @@ if}}
 
 {{index [object, property], [property, access]}}
 
-Though binding names cannot contain ((period character))s,
-`console.log` does have one. This is because `console.log` isn't a
-simple binding. It is actually an expression that retrieves the `log`
-property from the value held by the `console` binding. We'll
-find out exactly what this means in [Chapter ?](data#properties).
+Bog'lovchi nomlar ((davr belgisi))dan iborat bo'lmasa-da, `console.log`da bitta mavjud. Buning sababi, "console.log" oddiy bog'lash emas. Bu, aslida, "konsol" ulanishi tomonidan ushlab turilgan qiymatdan "log" xususiyatini oladigan iboradir. Bu nimani anglatishini biz [bob ?](ma'lumotlar#properties)da bilib olamiz.
 
 {{id return_values}}
 ## Return values
 
 {{index [comparison, "of numbers"], "return value", "Math.max function", maximum}}
 
-Showing a dialog box or writing text to the screen is a _((side
-effect))_. A lot of functions are useful because of the side effects
-they produce. Functions may also produce values, in which case they
-don't need to have a side effect to be useful. For example, the
-function `Math.max` takes any amount of number arguments and gives
-back the greatest.
+Muloqot oynasini ko'rsatish yoki ekranga matn yozish _((yon ta'sir))_ hisoblanadi. Ko'pgina funktsiyalar ular ishlab chiqaradigan nojo'ya ta'sirlar tufayli foydalidir. Funktsiyalar qiymatlarni ham ishlab chiqishi mumkin, bu holda foydali bo'lishi uchun ular yon ta'sirga ega bo'lishi shart emas. Masalan, “Math.max” funksiyasi istalgan miqdordagi son argumentlarini oladi va eng kattasini qaytaradi..
 
 ```
 console.log(Math.max(2, 4));
@@ -324,29 +217,20 @@ console.log(Math.max(2, 4));
 
 {{index [function, application], minimum, "Math.min function"}}
 
-When a function produces a value, it is said to _return_ that value.
-Anything that produces a value is an ((expression)) in JavaScript,
-which means function calls can be used within larger expressions. Here
-a call to `Math.min`, which is the opposite of `Math.max`, is used as
-part of a plus expression:
+Funktsiya qiymat hosil qilganda, bu qiymatni _qaytaradi deb aytiladi. Qiymat yaratadigan har qanday narsa JavaScript-da ((ifoda)), ya'ni funksiya chaqiruvlaridan kattaroq ifodalarda foydalanish mumkin. Bu yerda “Math.max” ga qarama-qarshi boʻlgan “Math.min” chaqiruvi ortiqcha ifodaning bir qismi sifatida ishlatiladi:
 
 ```
 console.log(Math.min(2, 4) + 100);
 // → 102
 ```
 
-The [next chapter](functions) explains how to write your own
-functions.
+[Keyingi bob](funktsiyalar) o'z funksiyalaringizni qanday yozishni tushuntiradi.
 
 ## Control flow
 
 {{index "execution order", program, "control flow"}}
 
-When your program contains more than one ((statement)), the statements
-are executed as if they are a story, from top to bottom. This example
-program has two statements. The first one asks the user for a number,
-and the second, which is executed after the first, shows the
-((square)) of that number.
+Agar dasturingiz bir nechta ((bayonot)) o'z ichiga olgan bo'lsa, gaplar xuddi hikoya kabi, yuqoridan pastga qarab bajariladi. Ushbu misol dasturda ikkita bayonot mavjud. Birinchisi foydalanuvchidan raqamni so'raydi va birinchisidan keyin bajariladigan ikkinchisi ushbu raqamning ((kvadrat)) ni ko'rsatadi.
 
 ```
 let theNumber = Number(prompt("Pick a number"));
@@ -356,13 +240,9 @@ console.log("Your number is the square root of " +
 
 {{index [number, "conversion to"], "type coercion", "Number function", "String function", "Boolean function", [Boolean, "conversion to"]}}
 
-The function `Number` converts a value to a number. We need that
-conversion because the result of `prompt` is a string value, and we
-want a number. There are similar functions called `String` and
-`Boolean` that convert values to those types.
+“Raqam” funksiyasi qiymatni raqamga aylantiradi. Bizga bu konvertatsiya kerak, chunki “prompt” natijasi qator qiymati va biz raqamni xohlaymiz. Qiymatlarni shu turlarga o'zgartiruvchi "String" va "Boolean" deb nomlangan shunga o'xshash funksiyalar mavjud.
 
-Here is the rather trivial schematic representation of straight-line
-control flow:
+To'g'ri chiziqli boshqaruv oqimining juda ahamiyatsiz sxematik ko'rinishi:
 
 {{figure {url: "img/controlflow-straight.svg", alt: "Trivial control flow", width: "4cm"}}}
 
@@ -370,19 +250,13 @@ control flow:
 
 {{index Boolean, ["control flow", conditional]}}
 
-Not all programs are straight roads. We may, for example, want to
-create a branching road, where the program takes the proper branch
-based on the situation at hand. This is called _((conditional
-execution))_.
+Hamma dasturlar ham to'g'ri yo'l emas. Biz, masalan, dastur mavjud vaziyatdan kelib chiqib, tegishli bo'limni oladigan tarmoqli yo'lni yaratmoqchi bo'lishimiz mumkin. Bunga _((shartli bajarish))_ deyiladi.
 
 {{figure {url: "img/controlflow-if.svg", alt: "Conditional control flow",width: "4cm"}}}
 
 {{index [syntax, statement], "Number function", "if keyword"}}
 
-Conditional execution is created with the `if` keyword in JavaScript.
-In the simple case, we want some code to be executed if, and only if,
-a certain condition holds. We might, for example, want to show the
-square of the input only if the input is actually a number.
+Shartli bajarish JavaScript-da `if` kalit so`zi bilan yaratiladi. Oddiy holatda, biz ma'lum bir shart bajarilgan taqdirdagina ba'zi kodlar bajarilishini xohlaymiz. Biz, masalan, kirishning kvadratini ko'rsatishni xohlaymiz, agar kiritilgan raqam aslida raqam bo'lsa.
 
 ```{test: wrap}
 let theNumber = Number(prompt("Pick a number"));
@@ -392,32 +266,19 @@ if (!Number.isNaN(theNumber)) {
 }
 ```
 
-With this modification, if you enter "parrot", no output is shown.
+Ushbu modifikatsiya bilan, agar siz "to'tiqush" ni kiritsangiz, hech qanday chiqish ko'rsatilmaydi.
 
 {{index [parentheses, statement]}}
 
-The `if` keyword executes or skips a statement depending on the value
-of a Boolean expression. The deciding expression is written after the
-keyword, between parentheses, followed by the statement to
-execute.
+`if` kalit so`zi mantiqiy ifoda qiymatiga qarab bayonotni bajaradi yoki o`tkazib yuboradi. Hal qiluvchi ifoda kalit so‘zdan so‘ng, qavslar orasiga yoziladi, so‘ngra bajariladigan gap.
 
 {{index "Number.isNaN function"}}
 
-The `Number.isNaN` function is a standard JavaScript function that
-returns `true` only if the argument it is given is `NaN`. The `Number`
-function happens to return `NaN` when you give it a string that
-doesn't represent a valid number. Thus, the condition translates to
-"unless `theNumber` is not-a-number, do this".
+“Number.isNaN” funksiyasi standart JavaScript funksiyasi boʻlib, unga berilgan argument “NaN” boʻlsagina “true” qiymatini qaytaradi. “Raqam” funksiyasi yaroqli raqamni bildirmaydigan qatorni berganingizda “NaN”ni qaytaradi. Shunday qilib, shart "agar "Raqam" raqam bo'lmasa, buni bajaring" deb tarjima qilinadi.
 
 {{index grouping, "{} (block)", [braces, "block"]}}
 
-The statement after the `if` is wrapped in braces (`{` and
-`}`) in this example. The braces can be used to group any number of
-statements into a single statement, called a _((block))_. You could
-also have omitted them in this case, since they hold only a single
-statement, but to avoid having to think about whether they are needed, most JavaScript programmers use them in every wrapped
-statement like this. We'll mostly follow that convention in this book,
-except for the occasional one-liner.
+Bu misolda `if` dan keyingi gap qavslar (`{` va `}`) ichiga o`ralgan. Qavslar istalgan sonli gaplarni _((blok))_ deb nomlangan bitta bayonotga guruhlash uchun ishlatilishi mumkin. Bu holatda siz ularni o'tkazib yuborishingiz ham mumkin edi, chunki ular faqat bitta bayonotga ega, ammo ular kerak yoki yo'qligini o'ylamaslik uchun JavaScript dasturchilarining ko'pchiligi ulardan har bir o'ralgan bayonotda foydalanadilar. Biz bu kitobda asosan o'sha konventsiyaga amal qilamiz, vaqti-vaqti bilan bitta chiziqdan tashqari.
 
 ```
 if (1 + 1 == 2) console.log("It's true");
@@ -426,10 +287,7 @@ if (1 + 1 == 2) console.log("It's true");
 
 {{index "else keyword"}}
 
-You often won't just have code that executes when a condition holds
-true, but also code that handles the other case. This alternate path
-is represented by the second arrow in the diagram. You can use the `else` keyword, together with `if`, to create two separate, alternative
-execution paths.
+Sizda ko'pincha shart to'g'ri bo'lganda bajariladigan kod emas, balki boshqa holatni hal qiluvchi kod ham bo'ladi. Ushbu muqobil yo'l diagrammadagi ikkinchi o'q bilan ifodalanadi. Ikki alohida, muqobil bajarish yoʻllarini yaratish uchun “if” bilan birga “else” kalit soʻzidan foydalanishingiz mumkin.
 
 ```{test: wrap}
 let theNumber = Number(prompt("Pick a number"));
@@ -443,8 +301,7 @@ if (!Number.isNaN(theNumber)) {
 
 {{index ["if keyword", chaining]}}
 
-If you have more than two paths to choose from, you can "chain" multiple `if`/`else`
-pairs together. Here's an example:
+Agar sizda ikkitadan ortiq yoʻl boʻlsa, bir nechta “if”/”else” juftlarini “zanjirlashingiz” mumkin. Mana bir misol:
 
 ```
 let num = Number(prompt("Pick a number"));
@@ -458,22 +315,16 @@ if (num < 10) {
 }
 ```
 
-The program will first check whether `num` is less than 10. If it is,
-it chooses that branch, shows `"Small"`, and is done. If it isn't, it
-takes the `else` branch, which itself contains a second `if`. If the
-second condition (`< 100`) holds, that means the number is at least 10
-but below 100, and `"Medium"` is shown. If it doesn't, the second and
-last `else` branch is chosen.
+Dastur avval `raqam` 10 dan kichik yoki yo'qligini tekshiradi. Agar shunday bo'lsa, u o'sha filialni tanlaydi, `"Kichik"`ni ko'rsatadi va bajariladi. Agar shunday bo'lmasa, u ikkinchi "if" ni o'z ichiga olgan "else" filialini oladi. Agar ikkinchi shart (`< 100`) bajarilsa, bu raqam kamida 10, lekin 100 dan past ekanligini bildiradi va `"O`rta"` ko`rsatiladi. Agar shunday bo'lmasa, ikkinchi va oxirgi "else" filiali tanlanadi.
 
-The schema for this program looks something like this:
+Ushbu dastur uchun sxema quyidagicha ko'rinadi:
 
 {{figure {url: "img/controlflow-nested-if.svg", alt: "Nested if control flow", width: "4cm"}}}
 
 {{id loops}}
 ## while and do loops
 
-Consider a program that outputs all ((even number))s from 0 to 12. One
-way to write this is as follows:
+0 dan 12 gacha bo'lgan barcha ((juft son)) larni chiqaradigan dasturni ko'rib chiqaylik. Buni yozishning bir usuli quyidagicha:
 
 ```
 console.log(0);
@@ -487,20 +338,13 @@ console.log(12);
 
 {{index ["control flow", loop]}}
 
-That works, but the idea of writing a program is to make something
-_less_ work, not more. If we needed all even numbers less than 1,000,
-this approach would be unworkable. What we need is a way to run a
-piece of code multiple times. This form of control flow is called a
-_((loop))_.
+Bu ishlaydi, lekin dastur yozish g'oyasi ko'proq emas, balki _kamroq_ ish qilishdir. Agar bizga 1000 dan kam bo'lgan barcha juft raqamlar kerak bo'lsa, bu yondashuv ishlamaydi. Bizga kerak bo'lgan narsa - kod qismini bir necha marta ishlatish usuli. Boshqarish oqimining bu shakli _((loop))_ deb ataladi.
 
 {{figure {url: "img/controlflow-loop.svg", alt: "Loop control flow",width: "4cm"}}}
 
 {{index [syntax, statement], "counter variable"}}
 
-Looping control flow allows us to go back to some point in the program
-where we were before and repeat it with our current program state. If
-we combine this with a binding that counts, we can do something like
-this:
+Loopli boshqaruv oqimi bizga dasturning avval bo'lgan nuqtasiga qaytish va uni joriy dastur holati bilan takrorlash imkonini beradi. Agar biz buni muhim bo'lgan bog'lash bilan birlashtirsak, biz shunday qilishimiz mumkin:
 
 ```
 let number = 0;
@@ -515,19 +359,11 @@ while (number <= 12) {
 
 {{index "while loop", Boolean, [parentheses, statement]}}
 
-A ((statement)) starting with the keyword `while` creates a loop. The
-word `while` is followed by an ((expression)) in parentheses and
-then a statement, much like `if`. The loop keeps entering that
-statement as long as the expression produces a value that gives `true`
-when converted to Boolean.
+`while` kalit so`zi bilan boshlangan ((bayonot)) sikl hosil qiladi. “While” soʻzidan keyin qavs ichida ((ifoda)) soʻng “if” ga oʻxshash gap keladi. Ifoda mantiqiyga aylantirilganda "true" qiymatini hosil qilganda, tsikl ushbu bayonotni kiritishda davom etadi.
 
 {{index [state, in binding], [binding, as state]}}
 
-The `number` binding demonstrates the way a ((binding)) can track the
-progress of a program. Every time the loop repeats, `number` gets a
-value that is 2 more than its previous value. At the beginning of
-every repetition, it is compared with the number 12 to decide whether
-the program's work is finished.
+`Raqam` bog'lanishi ((bog'lash)) dasturning borishini kuzatish usulini ko'rsatadi. Har safar tsikl takrorlanganda, `raqam` oldingi qiymatidan 2 ga ko'p qiymatga ega bo'ladi. Har bir takrorlashning boshida dastur ishi tugallanganligini aniqlash uchun 12 raqami bilan taqqoslanadi.
 
 {{index exponentiation}}
 
