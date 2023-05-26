@@ -1,6 +1,6 @@
 {{meta {docid: values}}}
 
-# Values, Types, and Operators
+# Qiymat, Tur, va Operatorlar
 
 {{quote {author: "Master Yuan-Ma", title: "The Book of Programming", chapter: true}
 
@@ -17,7 +17,7 @@ Kompyuter dunyosida faqat ma'lumotlar mavjud. Siz ma'lumotlarni o'qishingiz, ma'
 
 {{index CD, signal}}
 
-_Bits_ har qanday ikki qiymatli narsalar bo'lib, odatda nol va birliklar sifatida tavsiflanadi. Kompyuterning ichida ular yuqori yoki past elektr zaryadi, kuchli yoki zaif signal yoki CD yuzasida porloq yoki xira nuqta kabi shakllarni oladi. Diskret ma'lumotlarning har qanday qismi nol va birlar ketma-ketligiga qisqartirilishi va shu bilan bitlarda ifodalanishi mumkin.
+_Bit_ har qanday ikki qiymatli narsalar bo'lib, odatda nol va birliklar sifatida tavsiflanadi. Kompyuterning ichida ular yuqori yoki past elektr zaryadi, kuchli yoki zaif signal yoki CD yuzasida porloq yoki xira nuqta kabi shakllarni oladi. Diskret ma'lumotlarning har qanday qismi nol va birlar ketma-ketligiga qisqartirilishi va shu bilan bitlarda ifodalanishi mumkin.
 
 {{index "binary number", radix, "decimal number"}}
 
@@ -30,7 +30,7 @@ Masalan, 13 raqamini bit bilan ifodalashimiz mumkin. U o'nlik son bilan bir xil 
 
 Demak, bu ikkilik raqam 00001101. Uning nolga teng bo'lmagan raqamlari 8, 4 va 1 ni bildiradi va qo'shilib 13 ga etadi.
 
-## Values
+## Qiymat
 
 {{index [memory, organization], "volatile data storage", "hard drive"}}
 
@@ -89,7 +89,7 @@ Bu  2.998 × 10^8^ = 299,800,000 ni anglatadi
 
 Yuqorida aytib o'tilgan 9 kvadrilliondan kichik butun sonlar (shuningdek, _((integer))s_ deb ataladi) bilan hisoblar har doim aniq bo'lishi kafolatlanadi. Afsuski, kasr raqamlari bilan hisob-kitoblar odatda emas. P (pi) ni o'nlik sonli sonlar bilan aniq ifodalab bo'lmagani kabi, ularni saqlash uchun faqat 64 bit mavjud bo'lsa, ko'p sonlar aniqligini yo'qotadi. Bu sharmandalik, lekin u faqat muayyan vaziyatlarda amaliy muammolarni keltirib chiqaradi. Muhimi, bundan xabardor bo'lish va kasrli raqamli raqamlarga aniq qiymatlar sifatida emas, balki yaqinlashish sifatida qarashdir.
 
-### Arithmetic
+### Arifmetika
 
 {{index [syntax, operator], operator, "binary operator", arithmetic, addition, multiplication}}
 
@@ -121,7 +121,7 @@ Ushbu ustuvorlik qoidalari sizni tashvishga soladigan narsa emas. Agar shubhangi
 
 {{index "modulo operator", division, "remainder operator", "% operator"}}
 
-Yana bitta arifmetik operator bor, uni darhol taniy olmasligingiz mumkin. `%` belgisi _remainder_ operatsiyasini ifodalash uchun ishlatiladi. `X % Y` - `X`ni `Y`ga bo`lishning qolgan qismi. Masalan, `314 % 100` `14` ni, `144 % 12` esa `0`ni beradi. Qolgan operatorning ustuvorligi ko'paytirish va bo'lish bilan bir xil. _modulo_ deb ataladigan ushbu operatorni ham tez-tez ko'rasiz.
+Yana bitta arifmetik operator bor, uni darhol taniy olmasligingiz mumkin. `%` belgisi _remainder_ operatsiyasini ifodalash uchun ishlatiladi. `X % Y` - `X` ni `Y` ga bo'lishning qolgan qismi. Masalan, `314 % 100` `14` ni, `144 % 12` esa `0`ni beradi. Qolgan operatorning ustuvorligi ko'paytirish va bo'lish bilan bir xil. _modulo_ deb ataladigan ushbu operatorni ham tez-tez ko'rasiz.
 
 ### Special numbers
 
@@ -135,9 +135,9 @@ Birinchi ikkitasi 'Infinity' va ' Infinity' bo'lib, ular ijobiy va salbiy cheksi
 
 {{index NaN, "not a number", "division by zero"}}
 
-`NaN` "raqam emas" degan ma'noni anglatadi, garchi u raqam turining qiymati bo'lsa ham. Siz, masalan, `0/0` (nol nolga bo`lingan), `Infinity - Infinity` yoki mazmunli natija bermaydigan boshqa raqamli amallarni hisoblashga harakat qilganingizda bu natijaga erishasiz.
+`NaN` "Not a number (raqam emas)" degan ma'noni anglatadi, garchi u raqam turining qiymati bo'lsa ham. Siz, masalan, `0/0` (nol nolga bo'lingan), `Infinity - Infinity` yoki mazmunli natija bermaydigan boshqa raqamli amallarni hisoblashga harakat qilganingizda bu natijaga erishasiz.
 
-## Strings
+## String (Satrlar)
 
 {{indexsee "grave accent", backtick}}
 
@@ -190,7 +190,7 @@ Satrlar ham kompyuter ichida mavjud bo'lishi uchun bir qator bitlar sifatida mod
 
 {{index "UTF-16", emoji}}
 
-Va JavaScript shunday qiladi. Ammo bir murakkablik bor: JavaScript-ning taqdimoti har bir satr elementi uchun 16 bitdan foydalanadi, bu esa 2^16^ gacha turli belgilarni tavsiflashi mumkin. Ammo Unicode bundan ko'proq belgilarni aniqlaydi - hozirgi paytda ikki baravar ko'p. Shunday qilib, ba'zi belgilar, masalan, ko'plab emojilar JavaScript satrlarida ikkita "belgi o'rnini" egallaydi. Biz bunga [bob ?](yuqori_tartib#kod_birliklari)da qaytamiz.
+Va JavaScript shunday qiladi. Ammo bir murakkablik bor: JavaScript-ning taqdimoti har bir satr elementi uchun 16 bitdan foydalanadi, bu esa 2^16^ gacha turli belgilarni tavsiflashi mumkin. Ammo Unicode bundan ko'proq belgilarni aniqlaydi - hozirgi paytda ikki baravar ko'p. Shunday qilib, ba'zi belgilar, masalan, ko'plab emojilar JavaScript satrlarida ikkita "belgi o'rnini" egallaydi. Biz bunga [Chapter ?](top_order#code_units)da qaytamiz.
 
 {{index "+ operator", concatenation}}
 
@@ -210,7 +210,7 @@ Bitta yoki qo'sh tirnoq bilan yozilgan satrlar deyarli bir xil bo'ladi - yagona 
 
 Shablon literalida “${}” ichiga biror narsa yozsangiz, uning natijasi hisoblab chiqiladi, satrga aylantiriladi va shu pozitsiyaga kiritiladi. Misol "100 ning _yarmi 50_" ni hosil qiladi.
 
-## Unary operators
+## Birlik operatorlari
 
 {{index operator, "typeof operator", type}}
 
@@ -238,7 +238,7 @@ console.log(- (10 - 2))
 // → -8
 ```
 
-## Boolean values
+## Boolean qiymatlar 
 
 {{index Boolean, operator, true, false, bit}}
 

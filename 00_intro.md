@@ -1,25 +1,25 @@
 {{meta {load_files: ["code/intro.js"]}}}
 
-# Introduction
+# Kirish
 
-{{quote {author: "Ellen Ullman", title: "Close to the Machine: Technophilia and its Discontents", chapter: true}
+{{quote {author: "Ellen Ullman", title: "Qurilmaga yaqindan nazar: texnofiliya va uning noroziliklari", chapter: true}
 
- Biz tizimni o'z maqsadlarimiz uchun yaratmoqdamiz deb o'ylaymiz. Biz buni o'zimiz xohlagandek yaratayotganimizga ishonamiz ... Lekin kompyuter aslida bizga o'xshamaydi. U bizning juda nozik bir qismimiz, mantiq,tartib, qoida va ravshanlik tarafidan yaratilgan qurilmadir.
+ Biz tizimni o'z maqsadlarimiz uchun yaratmoqdamiz deb o'ylaymiz. Biz buni o'zimiz xohlagandek yaratayotganimizga ishonamiz ... Lekin kompyuter aslida bizga o'xshamaydi. U bizning juda nozik bir qismimiz: mantiq,tartib, qoida va ravshanlik tarafidan yaratilgan qurilmadir.
 
 quote}}
 
 {{figure {url: "img/chapter_picture_00.jpg", alt: "Picture of a screwdriver and a circuit board", chapter: "framed"}}}
 
-Bu kitob ((kompyuter))larga ko'rsatma berish haqida. Kompyuterlar bugungi kundahuddi oddiy vint buragichlar kabi keng tarqalganiga qaramasdan biroz murakkab tuzilishga ega va har doim ham kompyuterlar orqali o'zimiz xohlagan ishlarni amalga oshirish oson kechavermaydi.
+Bu kitob ((kompyuter))larga ko'rsatma berish haqida. Kompyuterlar bugungi kunda huddi oddiy vint buragichlar kabi keng tarqalganiga qaramasdan biroz murakkab tuzilishga ega va har doim ham kompyuterlar orqali o'zimiz xohlagan ishlarni amalga oshirish oson kechavermaydi.
 
 
 Agar siz kompyuterga elektron pochtadagi habarlarni ko'rsatish yoki hisoblash amallarini bajarish kabi oddiy va tushunish oson bo'lgan vazifalarni yuklatsangiz, shunchaki topshiriqqa oid ((ilova))dan foydalanishning o'zi kifoya qiladi. Lekin siz kompyuterga yuklatayotgan vazifa o'ziga xos, avvaldan belgilangan chegara va cheklovlarga ega bo'lmasa, unda bu vazifaga mo'ljallangan dasturning mavjud emaslik ehtimoli yuqori.
 
-Bu masalada sizga ((dasturlash)) yordam beradi. _Dasturlash_ kompyuterga qanday vazifa bajarishi kerakligi haqidagi buyruqlar jamlanmasi bo'lgan _dastur_ yaratish jarayonidir. Kompyuterlar indamas lekin juda sinchkovligi dasturlashni zerikarli va asabbuzar qilib ko'rsatadi.
+Bu masalada sizga ((dasturlash)) yordam beradi. _Dasturlash_ kompyuterga qanday vazifa bajarishi kerakligi haqida ma'lumot beruvchi buyruqlar jamlanmasi bo'lgan _dastur_ yaratish jarayonidir. Kompyuterlar indamas lekin juda sinchkov ekanligi dasturlashni zerikarli va asabbuzar qilib ko'rsatadi.
 
-{{index [programming, "joy of"], speed}}
+{{index [Dasturlash, tezlik], "lazzati"}}
 
-Lekin buning uaxshi tarafi shundaki agar siz ushbu kamchiliklarni yengib o'tib, bu 'indamas' qurilma bilan til topisha olsangiz, dasturlash juda foydali mashg'ulot bo'ladi. Bu sizga qo'l bilan bajarganda _bir umr_ vaqt olishi mumkin bo'lgan vazifalarni soniyalar ichida bajarishga yordam beradi. Bu sizning kompyuteringiz avvallari bajara olmagan topshiriqlarni bajarishiga imkoniyat yaratib berish yo'li. Dasturlash abstrakt fikrlash uchun ham ajoyib mashg'ulot bo'la oladi.
+Lekin buning yaxshi tarafi shundaki agar siz ushbu kamchiliklarni yengib o'tib, bu 'indamas' qurilma bilan til topisha olsangiz, dasturlash juda foydali mashg'ulot bo'ladi. Bu sizga qo'l bilan bajarganda _bir umr_ vaqt olishi mumkin bo'lgan vazifalarni soniyalar ichida bajarishga yordam beradi. Bu sizning kompyuteringiz avvallari bajara olmagan topshiriqlarni bajarishiga imkoniyat yaratib berish yo'li. Dasturlash abstrakt fikrlash uchun ham ajoyib mashg'ulot bo'la oladi.
 
 Dasturlashning asosiy qismi ((dasturlash tillari)) orqali amalga oshiriladi. _Dasturlash tili_ kompyuterlarga ko'rsatmalar berish uchun sun'iy ravishda tuzilgan til hisoblanadi. Qizig'i shundaki, kompyuterlar bilan muloqotga kirishishning ko'plab taraflari biz o'zaro muloqot qilishimizdan andoza olgan. Huddi biz so'zlashadigan tillar singari dasturlash tillari ham so'zlar va iboralarni yangi usullarda birlashtirishga imkon beradi, bu esa doimo yangi tushunchalarni ifodalash imkoni demakdir.
 
