@@ -2,8 +2,8 @@
 
 {{quote {author: "Donald Knuth", chapter: true}
 
-People think that computer science is the art of geniuses but the
-actual reality is the opposite, just many people doing things that
+People think that computer science is the art of geniuses but the insonlar computer sciencse ni daholar san'ati deb o'y;aydilar. 
+actual reality is the opposite, just many people doig things that
 build on each other, like a wall of mini stones.
 
 quote}}
@@ -13,7 +13,6 @@ quote}}
 {{figure {url: "img/chapter_picture_3.jpg", alt: "Picture of fern leaves with a fractal shape", chapter: framed}}}
 
 {{index function, [code, "structure of"]}}
-
 Functions are the bread and butter of JavaScript programming. The
 concept of wrapping a piece of program in a value has many uses. It
 gives us a way to structure larger programs, to reduce repetition, to
